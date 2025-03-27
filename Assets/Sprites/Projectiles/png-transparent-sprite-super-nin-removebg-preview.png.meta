@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: 862340a25606b674b82f4c6555db03dd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d869caec4981594cbd4e9ff2f7b8d9a
+      internalID: -1312665869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_110
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 94
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b49e00d479f97d4f86289554a5ebfd1
+      internalID: -1376460402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_111
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 93
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ea96b276a8f58419619f484efff2f0
+      internalID: 1570001015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 93
+        width: 38
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f1f765fe2147247ad99c728fce2ac1
+      internalID: -1181874473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 93
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988349e253ceb7d47a50afb53d3bc17b
+      internalID: 950790142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-sprite-super-nin-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 93
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0342d854a8e1cb4faa15a7a4288ac95
+      internalID: 1795770017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      png-transparent-sprite-super-nin-removebg-preview_0: -1181874473
+      png-transparent-sprite-super-nin-removebg-preview_1: 950790142
+      png-transparent-sprite-super-nin-removebg-preview_10: 563951695
+      png-transparent-sprite-super-nin-removebg-preview_100: -1273775755
+      png-transparent-sprite-super-nin-removebg-preview_101: -641283316
+      png-transparent-sprite-super-nin-removebg-preview_102: 2030196686
+      png-transparent-sprite-super-nin-removebg-preview_103: 1659151534
+      png-transparent-sprite-super-nin-removebg-preview_104: 1570479534
+      png-transparent-sprite-super-nin-removebg-preview_105: 323994581
+      png-transparent-sprite-super-nin-removebg-preview_106: 893730087
+      png-transparent-sprite-super-nin-removebg-preview_107: 1162900144
+      png-transparent-sprite-super-nin-removebg-preview_108: -639445825
+      png-transparent-sprite-super-nin-removebg-preview_109: -1312665869
+      png-transparent-sprite-super-nin-removebg-preview_11: 810331889
+      png-transparent-sprite-super-nin-removebg-preview_110: -1376460402
+      png-transparent-sprite-super-nin-removebg-preview_111: 1570001015
+      png-transparent-sprite-super-nin-removebg-preview_112: 1732330784
+      png-transparent-sprite-super-nin-removebg-preview_113: 1606622915
+      png-transparent-sprite-super-nin-removebg-preview_114: 79466947
+      png-transparent-sprite-super-nin-removebg-preview_115: 1839856246
+      png-transparent-sprite-super-nin-removebg-preview_116: 138124463
+      png-transparent-sprite-super-nin-removebg-preview_117: 1781007208
+      png-transparent-sprite-super-nin-removebg-preview_118: -1600543566
+      png-transparent-sprite-super-nin-removebg-preview_119: -744140348
+      png-transparent-sprite-super-nin-removebg-preview_12: -1934627554
+      png-transparent-sprite-super-nin-removebg-preview_120: -2134632008
+      png-transparent-sprite-super-nin-removebg-preview_121: -1312814720
+      png-transparent-sprite-super-nin-removebg-preview_122: 276896546
+      png-transparent-sprite-super-nin-removebg-preview_123: -2109176347
+      png-transparent-sprite-super-nin-removebg-preview_124: -308914956
+      png-transparent-sprite-super-nin-removebg-preview_125: 1667022018
+      png-transparent-sprite-super-nin-removebg-preview_126: 1613209602
+      png-transparent-sprite-super-nin-removebg-preview_127: 1188120472
+      png-transparent-sprite-super-nin-removebg-preview_128: -707315313
+      png-transparent-sprite-super-nin-removebg-preview_129: 1383274089
+      png-transparent-sprite-super-nin-removebg-preview_13: -568797871
+      png-transparent-sprite-super-nin-removebg-preview_130: 286219436
+      png-transparent-sprite-super-nin-removebg-preview_131: -382180544
+      png-transparent-sprite-super-nin-removebg-preview_132: -1439443375
+      png-transparent-sprite-super-nin-removebg-preview_133: -935820467
+      png-transparent-sprite-super-nin-removebg-preview_134: -1385910892
+      png-transparent-sprite-super-nin-removebg-preview_135: -1308859876
+      png-transparent-sprite-super-nin-removebg-preview_136: -911570155
+      png-transparent-sprite-super-nin-removebg-preview_137: -1356566516
+      png-transparent-sprite-super-nin-removebg-preview_138: 1692854272
+      png-transparent-sprite-super-nin-removebg-preview_139: 1683197502
+      png-transparent-sprite-super-nin-removebg-preview_14: -665805758
+      png-transparent-sprite-super-nin-removebg-preview_140: 810759944
+      png-transparent-sprite-super-nin-removebg-preview_141: -1971169852
+      png-transparent-sprite-super-nin-removebg-preview_142: -1676505800
+      png-transparent-sprite-super-nin-removebg-preview_143: -1875068948
+      png-transparent-sprite-super-nin-removebg-preview_144: -302425309
+      png-transparent-sprite-super-nin-removebg-preview_145: 1755629960
+      png-transparent-sprite-super-nin-removebg-preview_15: 589453131
+      png-transparent-sprite-super-nin-removebg-preview_16: -1700049303
+      png-transparent-sprite-super-nin-removebg-preview_17: -1148058168
+      png-transparent-sprite-super-nin-removebg-preview_18: -992759538
+      png-transparent-sprite-super-nin-removebg-preview_19: -1281512526
+      png-transparent-sprite-super-nin-removebg-preview_2: 1795770017
+      png-transparent-sprite-super-nin-removebg-preview_20: -1746566473
+      png-transparent-sprite-super-nin-removebg-preview_21: 1251599696
+      png-transparent-sprite-super-nin-removebg-preview_22: -839698368
+      png-transparent-sprite-super-nin-removebg-preview_23: -1993458851
+      png-transparent-sprite-super-nin-removebg-preview_24: 859045575
+      png-transparent-sprite-super-nin-removebg-preview_25: -330857768
+      png-transparent-sprite-super-nin-removebg-preview_26: -289518361
+      png-transparent-sprite-super-nin-removebg-preview_27: -606815309
+      png-transparent-sprite-super-nin-removebg-preview_28: 1181150812
+      png-transparent-sprite-super-nin-removebg-preview_29: 1995535114
+      png-transparent-sprite-super-nin-removebg-preview_3: 1828450816
+      png-transparent-sprite-super-nin-removebg-preview_30: 2144804859
+      png-transparent-sprite-super-nin-removebg-preview_31: -466546909
+      png-transparent-sprite-super-nin-removebg-preview_32: 372434723
+      png-transparent-sprite-super-nin-removebg-preview_33: -1499365079
+      png-transparent-sprite-super-nin-removebg-preview_34: 1536282016
+      png-transparent-sprite-super-nin-removebg-preview_35: 938207024
+      png-transparent-sprite-super-nin-removebg-preview_36: 1885887446
+      png-transparent-sprite-super-nin-removebg-preview_37: 1082248202
+      png-transparent-sprite-super-nin-removebg-preview_38: -207156749
+      png-transparent-sprite-super-nin-removebg-preview_39: 1365474057
+      png-transparent-sprite-super-nin-removebg-preview_4: -1352313053
+      png-transparent-sprite-super-nin-removebg-preview_40: 261816126
+      png-transparent-sprite-super-nin-removebg-preview_41: -28886639
+      png-transparent-sprite-super-nin-removebg-preview_42: -336183508
+      png-transparent-sprite-super-nin-removebg-preview_43: 722463745
+      png-transparent-sprite-super-nin-removebg-preview_44: 413335630
+      png-transparent-sprite-super-nin-removebg-preview_45: 1936622906
+      png-transparent-sprite-super-nin-removebg-preview_46: -1735074018
+      png-transparent-sprite-super-nin-removebg-preview_47: -2035572371
+      png-transparent-sprite-super-nin-removebg-preview_48: -1758136713
+      png-transparent-sprite-super-nin-removebg-preview_49: -382172043
+      png-transparent-sprite-super-nin-removebg-preview_5: 441489582
+      png-transparent-sprite-super-nin-removebg-preview_50: -610164887
+      png-transparent-sprite-super-nin-removebg-preview_51: 1398498317
+      png-transparent-sprite-super-nin-removebg-preview_52: 2103335676
+      png-transparent-sprite-super-nin-removebg-preview_53: -833702017
+      png-transparent-sprite-super-nin-removebg-preview_54: 920593437
+      png-transparent-sprite-super-nin-removebg-preview_55: 314560758
+      png-transparent-sprite-super-nin-removebg-preview_56: -519476794
+      png-transparent-sprite-super-nin-removebg-preview_57: 389652141
+      png-transparent-sprite-super-nin-removebg-preview_58: -1569683610
+      png-transparent-sprite-super-nin-removebg-preview_59: -695974615
+      png-transparent-sprite-super-nin-removebg-preview_6: -709260970
+      png-transparent-sprite-super-nin-removebg-preview_60: 797007858
+      png-transparent-sprite-super-nin-removebg-preview_61: 514010941
+      png-transparent-sprite-super-nin-removebg-preview_62: -1351149078
+      png-transparent-sprite-super-nin-removebg-preview_63: 152547395
+      png-transparent-sprite-super-nin-removebg-preview_64: -335145099
+      png-transparent-sprite-super-nin-removebg-preview_65: -771245614
+      png-transparent-sprite-super-nin-removebg-preview_66: -1368470028
+      png-transparent-sprite-super-nin-removebg-preview_67: -1847580072
+      png-transparent-sprite-super-nin-removebg-preview_68: -420351797
+      png-transparent-sprite-super-nin-removebg-preview_69: -1746556546
+      png-transparent-sprite-super-nin-removebg-preview_7: -420840967
+      png-transparent-sprite-super-nin-removebg-preview_70: -1951228414
+      png-transparent-sprite-super-nin-removebg-preview_71: -264205026
+      png-transparent-sprite-super-nin-removebg-preview_72: 1441804690
+      png-transparent-sprite-super-nin-removebg-preview_73: -664757690
+      png-transparent-sprite-super-nin-removebg-preview_74: -1028594083
+      png-transparent-sprite-super-nin-removebg-preview_75: 395111404
+      png-transparent-sprite-super-nin-removebg-preview_76: -474652634
+      png-transparent-sprite-super-nin-removebg-preview_77: -1438121506
+      png-transparent-sprite-super-nin-removebg-preview_78: -1357574634
+      png-transparent-sprite-super-nin-removebg-preview_79: -314549782
+      png-transparent-sprite-super-nin-removebg-preview_8: 1519310363
+      png-transparent-sprite-super-nin-removebg-preview_80: 119455498
+      png-transparent-sprite-super-nin-removebg-preview_81: 1180086154
+      png-transparent-sprite-super-nin-removebg-preview_82: 390695285
+      png-transparent-sprite-super-nin-removebg-preview_83: 400840114
+      png-transparent-sprite-super-nin-removebg-preview_84: -1251916552
+      png-transparent-sprite-super-nin-removebg-preview_85: -1349749090
+      png-transparent-sprite-super-nin-removebg-preview_86: -1760195903
+      png-transparent-sprite-super-nin-removebg-preview_87: 2098210658
+      png-transparent-sprite-super-nin-removebg-preview_88: 20770058
+      png-transparent-sprite-super-nin-removebg-preview_89: -277029818
+      png-transparent-sprite-super-nin-removebg-preview_9: -905606389
+      png-transparent-sprite-super-nin-removebg-preview_90: 305269896
+      png-transparent-sprite-super-nin-removebg-preview_91: 116033100
+      png-transparent-sprite-super-nin-removebg-preview_92: -1307156203
+      png-transparent-sprite-super-nin-removebg-preview_93: 1368823485
+      png-transparent-sprite-super-nin-removebg-preview_94: -426062578
+      png-transparent-sprite-super-nin-removebg-preview_95: -207563456
+      png-transparent-sprite-super-nin-removebg-preview_96: 601923475
+      png-transparent-sprite-super-nin-removebg-preview_97: 1630254602
+      png-transparent-sprite-super-nin-removebg-preview_98: -135903183
+      png-transparent-sprite-super-nin-removebg-preview_99: 755661497
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
