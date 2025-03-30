@@ -5,6 +5,7 @@ public class ButtonPlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] projectiles;
+    [SerializeField] private AudioClip projectileSound;
 
     private Animator anim;
     private PlayerMovement playerMovement;
@@ -31,6 +32,7 @@ public class ButtonPlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        SoundManager.instance.PlaySound(projectileSound);
         anim.SetTrigger("Attack");
         cooldownTimer = 0;
 

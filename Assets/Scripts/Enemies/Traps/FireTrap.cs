@@ -14,27 +14,43 @@ public class FireTrap : MonoBehaviour
     private bool triggered;
     private bool active;
 
+    private Health playerHealth;
+
+    [Header("SFX")]
+    [SerializeField] private AudioClip firetrapSound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        if (playerHealth != null && active)
+            playerHealth.TakeDamage(damage);
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
+            playerHealth = collision.GetComponent<Health>();
+
             if (!triggered)
                 StartCoroutine(ActivateFireTrap());
+
+            if (active)
+                collision.GetComponent<Health>().TakeDamage(damage);
         }
         
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-            if (active)
-                collision.GetComponent<Health>().TakeDamage(damage);
+            playerHealth = null;
     }
 
 
@@ -47,6 +63,7 @@ public class FireTrap : MonoBehaviour
 
         //wait then activate trap and turn on animation
         yield return new WaitForSeconds(activationDelay);
+        SoundManager.instance.PlaySound(firetrapSound);
         spriteRenderer.color = Color.white;
         active = true;
         anim.SetBool("activated", true);

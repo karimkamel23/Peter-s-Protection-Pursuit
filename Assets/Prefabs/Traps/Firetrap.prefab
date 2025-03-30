@@ -103,6 +103,7 @@ MonoBehaviour:
   damage: 1
   activationDelay: 2
   activeTime: 2
+  firetrapSound: {fileID: 8300000, guid: 0cecf08a4285a3e47b839b9814bb1073, type: 3}
 --- !u!61 &3561424927616832086
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ public class ButtonPlayerMovement : MonoBehaviour
     private float horizontalInput = 0f;
     private bool jumpRequested = false;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -58,6 +61,7 @@ public class ButtonPlayerMovement : MonoBehaviour
     {
         body.velocity = new Vector2(body.velocity.x, jumpForce);
         anim.SetTrigger("Jump");
+        SoundManager.instance.PlaySound(jumpSound);
     }
 
     private bool isGrounded()

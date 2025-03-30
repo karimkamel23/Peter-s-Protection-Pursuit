@@ -11,6 +11,9 @@ public class Projectile : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Animator anim;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip impactSound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +37,10 @@ public class Projectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
+        SoundManager.instance.PlaySound(impactSound);
+
+        if (collision.CompareTag("Enemy"))
+            collision.GetComponent<Health>().TakeDamage(1);
     }
 
     public void SetDirection(float _direction)

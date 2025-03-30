@@ -5,7 +5,6 @@ public class Health : MonoBehaviour
 {
     [Header ("Health")]
     [SerializeField] private int maxHealth = 3;
-    [SerializeField] private HealthUI healthUI;
 
     private int currentHealth;
     private Animator anim;
@@ -16,35 +15,48 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRenderer;
 
+
+    [Header("Components")]
+    [SerializeField] private Behaviour[] components;
+
+    [Header("Death Sound")]
+    [SerializeField] AudioClip deathSound;
+
+    [Header("Hurt Sound")]
+    [SerializeField] AudioClip hurtSound;
+
+    private bool invulnerable;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
-        healthUI.UpdateHealthUI(currentHealth);
     }
 
     public void TakeDamage(int damage)
     {
+        if (invulnerable) return;
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        healthUI.UpdateHealthUI(currentHealth);
 
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
+            SoundManager.instance.PlaySound(hurtSound);
             StartCoroutine(Invurnability());
         }
         else {
             if (!dead)
             {
                 anim.SetTrigger("death");
-                GetComponent<PlayerMovement>().enabled = false; /////////////////////////////////
-                GetComponent<ButtonPlayerMovement>().enabled = false;
-                GetComponent<ButtonPlayerAttack>().enabled = false;
+
+                foreach (Behaviour component in components)
+                    component.enabled = false;
 
                 dead = true;
+                SoundManager.instance.PlaySound(deathSound);
             }
         }
     }
@@ -54,11 +66,11 @@ public class Health : MonoBehaviour
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        healthUI.UpdateHealthUI(currentHealth);
     }
 
     private IEnumerator Invurnability()
     {
+        invulnerable = true;
         Physics2D.IgnoreLayerCollision(8, 9, true);
         for (int i = 0; i < numberOfFlashes; i++) { 
             spriteRenderer.color = new Color(1,0,0,0.5f);
@@ -67,7 +79,17 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(8, 9, false);
+        invulnerable =false;
 
     }
 
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }

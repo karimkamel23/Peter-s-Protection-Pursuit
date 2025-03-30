@@ -10,8 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6276669863492158904}
   - component: {fileID: 3068986066087310806}
+  - component: {fileID: 2710530938622565427}
+  - component: {fileID: 8524088637368977245}
+  - component: {fileID: 4515495160522011623}
+  - component: {fileID: 8201391059915361335}
+  - component: {fileID: 8961285829656596109}
   - component: {fileID: 3421487529278448853}
-  - component: {fileID: 2432721926855322911}
   - component: {fileID: 8975033595577638472}
   m_Layer: 9
   m_Name: SkullEnemy
@@ -87,6 +91,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2710530938622565427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336462604614600578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e083518330e9244facbab4755a5a751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components:
+  - {fileID: 8524088637368977245}
+  deathSound: {fileID: 8300000, guid: eb770f311d14d6b4093b5aaf8dc7e1b6, type: 3}
+  hurtSound: {fileID: 8300000, guid: 1d6f52a1762ca844991c9622bc0db920, type: 3}
+--- !u!114 &8524088637368977245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336462604614600578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea43f6773788ee4197ba69b22fea3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 1
+  range: 1.5
+  damage: 2
+  colliderDistance: 2
+  boxCollider: {fileID: 8975033595577638472}
+  top: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  attackSound: {fileID: 8300000, guid: 8c7fedb9598b14843bfc28c06b862bdb, type: 3}
+--- !u!114 &4515495160522011623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336462604614600578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4287f0577e7654594465516a2aac41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &8201391059915361335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336462604614600578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbee35a6f2f3e94bbfd5a0dd5e71e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 0.2
+--- !u!114 &8961285829656596109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336462604614600578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a82795858ed784daa522a3a522d61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathDuration: 0.4
 --- !u!95 &3421487529278448853
 Animator:
   serializedVersion: 5
@@ -108,27 +192,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2432721926855322911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8336462604614600578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbee35a6f2f3e94bbfd5a0dd5e71e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 1
-  range: 1.5
-  colliderDistance: 2
-  damage: 2
-  boxCollider: {fileID: 8975033595577638472}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  attackSpeed: 0.2
 --- !u!61 &8975033595577638472
 BoxCollider2D:
   m_ObjectHideFlags: 0

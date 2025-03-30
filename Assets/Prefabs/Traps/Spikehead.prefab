@@ -100,12 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 1
+  speed: 0.4
   range: 16
   checkDelay: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  impactSound: {fileID: 8300000, guid: 08ecf6a5b1c359c49a353f9b988136a4, type: 3}
 --- !u!61 &2734740729460079659
 BoxCollider2D:
   m_ObjectHideFlags: 0

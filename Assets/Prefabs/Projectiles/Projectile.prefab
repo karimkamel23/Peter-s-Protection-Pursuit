@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  impactSound: {fileID: 8300000, guid: 425db622413c21246bba998dbdb7cd4e, type: 3}
 --- !u!61 &8224516053921054547
 BoxCollider2D:
   m_ObjectHideFlags: 0

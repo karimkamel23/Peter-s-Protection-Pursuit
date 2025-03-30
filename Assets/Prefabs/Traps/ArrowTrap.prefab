@@ -60,6 +60,7 @@ MonoBehaviour:
   - {fileID: 1750890267212556601}
   - {fileID: 7555994501000368669}
   - {fileID: 3592459755756794549}
+  arrowSound: {fileID: 8300000, guid: dceff17d161460245986e1c30e0674ab, type: 3}
 --- !u!1 &4076645946048638339
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,10 +469,6 @@ PrefabInstance:
     - target: {fileID: 6623811372406540836, guid: 98bc09383431de246aa082f2babf302e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6961416142830301188, guid: 98bc09383431de246aa082f2babf302e, type: 3}
-      propertyPath: resetTime
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
