@@ -8,7 +8,7 @@ public class ButtonPlayerAttack : MonoBehaviour
     [SerializeField] private AudioClip projectileSound;
 
     private Animator anim;
-    private PlayerMovement playerMovement;
+    private ButtonPlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
     private bool attackRequested = false;
 
@@ -16,7 +16,7 @@ public class ButtonPlayerAttack : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<ButtonPlayerMovement>();
     }
 
 

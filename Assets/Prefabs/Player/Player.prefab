@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5616705386869422849}
   - component: {fileID: 6484384414555763900}
-  - component: {fileID: 2979586042724744289}
   - component: {fileID: 1609551870517856644}
   - component: {fileID: 7212972581467646542}
-  - component: {fileID: 7586283330006422715}
   - component: {fileID: 230381581258764385}
+  - component: {fileID: 6675425468939161024}
   - component: {fileID: 1083919713857516458}
   - component: {fileID: 3886924422666691660}
   - component: {fileID: 8096426984026422451}
@@ -93,25 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2979586042724744289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3851597039591712489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7632f0ec8e05b7b4ebb716f78abaf30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &1609551870517856644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,21 +139,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   projectileSound: {fileID: 8300000, guid: daa693aecd38cad4694e26d3fb2380f1, type: 3}
---- !u!114 &7586283330006422715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3851597039591712489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4124affabb6b3c047b0d90dc62365834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 0.5
-  firePoint: {fileID: 5647891949771937558}
-  projectiles: []
 --- !u!114 &230381581258764385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +159,18 @@ MonoBehaviour:
   - {fileID: 7212972581467646542}
   deathSound: {fileID: 8300000, guid: 3a55d3b5617daf341965ebd7b2f21256, type: 3}
   hurtSound: {fileID: 8300000, guid: 1d6f52a1762ca844991c9622bc0db920, type: 3}
+--- !u!114 &6675425468939161024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3851597039591712489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c490b32f3faea5c45adacd001de571f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1083919713857516458
 BoxCollider2D:
   m_ObjectHideFlags: 0
