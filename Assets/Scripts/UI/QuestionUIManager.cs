@@ -7,9 +7,15 @@ public class QuestionUIManager : MonoBehaviour
 {
     public static QuestionUIManager Instance;
 
+    [Header("UI Manager")]
+    [SerializeField] private UIManager uIManager;
+
+    [Header("Question UI")]
     [SerializeField] private GameObject questionPanel;
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private Button[] answerButtons;
+
+    [Header("Question System Parameters")]
     [SerializeField] private Color correctColor, wrongColor, defaultColor;
     [SerializeField] private int penaltyAmount = 10;
 
@@ -34,6 +40,7 @@ public class QuestionUIManager : MonoBehaviour
 
     public void ShowQuestion(QuestionData data)
     {
+        uIManager.ToggleHUD(false);
         questionPanel.SetActive(true);
         questionText.text = data.questionText;
         correctAnswerIndex = data.correctAnswerIndex;
@@ -68,6 +75,7 @@ public class QuestionUIManager : MonoBehaviour
 
     private void CloseQuestion()
     {
+        uIManager.ToggleHUD(true);
         questionPanel.SetActive(false);
         doorToOpen.OpenDoor();
     }

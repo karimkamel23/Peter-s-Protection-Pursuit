@@ -18,9 +18,7 @@ public class ScoreHandler : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    private void Start()
-    {
+
         ResetScore();
     }
 
@@ -36,7 +34,6 @@ public class ScoreHandler : MonoBehaviour
 
     public int GetCurrentScore()
     {
-        // Convert the player's score to a value between 0 and 3
         float percent = (float)CurrentScore / maxScore;
         int stars = Mathf.Clamp(Mathf.FloorToInt(percent * 3), 0, 3);
         return stars;

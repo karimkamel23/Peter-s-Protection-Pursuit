@@ -22,6 +22,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private AudioClip pauseSound;
 
+    [Header("Level Completion")]
+    [SerializeField] private GameObject levelCompleteScreen;
+    [SerializeField] private AudioClip levelCompleteSound;
+
+    [Header("Other Screens")]
+    [SerializeField] private GameObject[] screens;
+
     [Header("Audio")]
     [SerializeField] private GameObject audioScreen;
     [SerializeField] Slider soundSlider;
@@ -45,6 +52,9 @@ public class UIManager : MonoBehaviour
             gameOverScreen.SetActive(false);
 
         if (pauseScreen != null)
+            pauseScreen.SetActive(false);
+
+        if (levelCompleteScreen != null)
             pauseScreen.SetActive(false);
     }
     private void Update()
@@ -81,6 +91,21 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0; 
         }
         else Time.timeScale = 1;
+    }
+
+    public void ToggleHUD(bool status)
+    {
+        foreach (GameObject screen in screens)
+        {
+            if (screen != null) screen.SetActive(status);
+        }
+    }
+
+    public void LevelCompleted()
+    {
+        ToggleHUD(false);
+        SoundManager.instance.PlaySound(levelCompleteSound);
+        levelCompleteScreen.SetActive(true);
     }
 
     public void SetMusicVolume()
