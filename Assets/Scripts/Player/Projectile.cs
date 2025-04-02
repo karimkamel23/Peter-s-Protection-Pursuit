@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Door") || collision.CompareTag("Collectible")) return;
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");

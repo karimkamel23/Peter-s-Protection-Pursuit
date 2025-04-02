@@ -8,7 +8,7 @@ public class HealthCollectible : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Health>().Heal(healthValue);
             SoundManager.instance.PlaySound(pickupSound);

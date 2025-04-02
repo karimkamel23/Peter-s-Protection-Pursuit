@@ -2,6 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
+
+[System.Serializable]
+public class LevelData
+{
+    public string levelScene;                        // Scene name to load
+    public string levelName;                // Reference to the full Level1 or Level2 UI object
+    public GameObject selectionIndicator;           // Reference to the LevelSelectIndicator inside it
+}
 
 public class UIManager : MonoBehaviour
 {
@@ -24,14 +33,24 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject mainMenuScreen;
     [SerializeField] private PlayerUIAnimation playerAnimation;
 
+    [Header("Level Select")]
+    [SerializeField] private GameObject levelSelectScreen;
+    [SerializeField] private LevelData[] levels;
+    [SerializeField] private TextMeshProUGUI selectedLevelTitle;
+    private string selectedSceneName = null;
+
     private void Awake()
     {
-        gameOverScreen.SetActive(false);
-        pauseScreen.SetActive(false);
+        if(gameOverScreen != null)
+            gameOverScreen.SetActive(false);
+
+        if (pauseScreen != null)
+            pauseScreen.SetActive(false);
     }
     private void Update()
     {
         UpdateVolume();
+
     }
 
     public void GameOver()
@@ -80,11 +99,6 @@ public class UIManager : MonoBehaviour
         musicSlider.value = SoundManager.instance.GetCurrentMusicVolume();
     }
 
-    private void UpdateVolume()
-    {
-        UpdateMusicPercentage();
-        UpdateSoundPercentage();
-    }
     private void UpdateMusicPercentage()
     {
         musicPercentage.text = Mathf.RoundToInt(SoundManager.instance.GetCurrentMusicVolume() * 100f) + "%";
@@ -95,10 +109,17 @@ public class UIManager : MonoBehaviour
         soundPercentage.text = Mathf.RoundToInt(SoundManager.instance.GetCurrentSoundVolume() * 100f) + "%";
     }
 
+    private void UpdateVolume()
+    {
+        UpdateMusicPercentage();
+        UpdateSoundPercentage();
+    }
+
     public void OpenAudioScreen()
     {
         audioScreen.gameObject.SetActive(true);
         SetVolumeSliders();
+        UpdateVolume();
     }
 
     public void CloseAudioScreen()
@@ -110,6 +131,60 @@ public class UIManager : MonoBehaviour
     public void GoToLevelSelect()
     {
         playerAnimation.PlayPlayerAnimation();
-        mainMenuScreen.gameObject.SetActive(false);
+        StartCoroutine(SwitchScreen(mainMenuScreen, levelSelectScreen));
+    }
+
+    public void GoToMainMenu()
+    {
+        playerAnimation.PlayReverseAnimation();
+        StartCoroutine(SwitchScreen(levelSelectScreen, mainMenuScreen));
+    }
+
+    private IEnumerator SwitchScreen(GameObject screenToHide, GameObject screenToShow)
+    {
+        screenToHide.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2.5f);
+        screenToShow.gameObject.SetActive(true);
+    }
+
+    public void SelectLevel(int index)
+    {
+        // Sanity check
+        if (index < 0 || index >= levels.Length) return;
+
+        // Deactivate all selection indicators
+        foreach (var level in levels)
+        {
+            if (level.selectionIndicator != null)
+                level.selectionIndicator.SetActive(false);
+        }
+
+        // Activate the selected one
+        var selectedLevel = levels[index];
+        selectedLevel.selectionIndicator.SetActive(true);
+
+        // Set the selected scene name
+        selectedSceneName = selectedLevel.levelScene;
+
+        // Update title text
+        if (selectedLevelTitle != null)
+            selectedLevelTitle.text = $"{selectedLevel.levelName}";
+    }
+
+    public void PlaySelectedLevel()
+    {
+        if (!string.IsNullOrEmpty(selectedSceneName))
+        {
+            levelSelectScreen.SetActive(false);
+            playerAnimation.PlayPlayerAnimation();
+            StartCoroutine(LoadSelectedLevel());
+        }
+    }
+
+    private IEnumerator LoadSelectedLevel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(selectedSceneName);
     }
 }
+
