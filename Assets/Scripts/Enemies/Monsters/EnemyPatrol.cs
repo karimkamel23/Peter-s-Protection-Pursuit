@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Movement Parameters")]
     [SerializeField] private float speed;
     [SerializeField] private float idleDuration;
+    [SerializeField] private bool startMovingLeft = false;
     private float idleTimer;
     private Vector3 initScale;
     private bool movingLeft;
@@ -22,6 +23,7 @@ public class EnemyPatrol : MonoBehaviour
     private void Awake()
     {
         initScale = enemy.localScale; 
+        movingLeft = startMovingLeft;
     }
 
     private void OnDisable()

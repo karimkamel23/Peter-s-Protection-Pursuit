@@ -9,7 +9,9 @@ public class Door : MonoBehaviour
 
     [Header("Lock Settings")]
     [SerializeField] private GameObject doorCollider;
+    [SerializeField] private AudioClip doorOpenSound;
     private SpriteRenderer spriteRenderer;
+
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
+        SoundManager.instance.PlaySound(doorOpenSound);
         if (spriteRenderer != null)
             spriteRenderer.enabled = false;
 

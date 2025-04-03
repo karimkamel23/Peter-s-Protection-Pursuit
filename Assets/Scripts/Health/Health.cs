@@ -85,6 +85,7 @@ public class Health : MonoBehaviour
 
     public int GetCurrentHealth()
     {
+        Debug.Log("cuurrent: "+ currentHealth);
         return currentHealth;
     }
 
