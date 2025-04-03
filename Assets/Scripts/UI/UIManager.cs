@@ -27,7 +27,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AudioClip levelCompleteSound;
 
     [Header("Other Screens")]
-    [SerializeField] private GameObject[] screens;
+    [SerializeField] private GameObject[] HUDs;
+    [SerializeField] private GameObject enemyInfoScreen;
 
     [Header("Audio")]
     [SerializeField] private GameObject audioScreen;
@@ -72,13 +73,13 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LoadingScreen.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        LoadingScreen.Instance.LoadScene(0);
     }
 
     public void pauseGame()
@@ -95,7 +96,7 @@ public class UIManager : MonoBehaviour
 
     public void ToggleHUD(bool status)
     {
-        foreach (GameObject screen in screens)
+        foreach (GameObject screen in HUDs)
         {
             if (screen != null) screen.SetActive(status);
         }
@@ -150,6 +151,11 @@ public class UIManager : MonoBehaviour
     public void CloseAudioScreen()
     {
         audioScreen.gameObject.SetActive(false);
+    }
+
+    public void ToggleEnemyScreen()
+    {
+        enemyInfoScreen.gameObject.SetActive(!enemyInfoScreen.activeInHierarchy);
     }
 
 
@@ -209,7 +215,7 @@ public class UIManager : MonoBehaviour
     private IEnumerator LoadSelectedLevel()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(selectedSceneName);
+        LoadingScreen.Instance.LoadScene(selectedSceneName);
     }
 }
 

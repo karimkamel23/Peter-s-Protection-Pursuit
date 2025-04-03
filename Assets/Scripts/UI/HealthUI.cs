@@ -27,12 +27,9 @@ public class HealthUI : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("Coroutine");
             int currentHealth = playerHealth.GetCurrentHealth();
-            Debug.Log("Current = "+ currentHealth + "last: "+ lastHealth);
             if (currentHealth != lastHealth)
             {
-                Debug.Log("Health Changed to "+ currentHealth);
                 UpdateHealthUI(currentHealth);
                 lastHealth = currentHealth;
             }
@@ -45,12 +42,10 @@ public class HealthUI : MonoBehaviour
         {
             if (i < currentHealth)
             {
-                Debug.Log("Showing Full");
                 hearts[i].sprite = fullHeart;  // Show full heart
             }
             else
             {
-                Debug.Log("Showing Empty");
                 hearts[i].sprite = emptyHeart;
                 StartCoroutine(ShakeHeart(hearts[i])); // Show empty heart
             }
