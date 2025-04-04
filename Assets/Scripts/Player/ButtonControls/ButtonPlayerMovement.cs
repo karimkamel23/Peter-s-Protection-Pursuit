@@ -2,10 +2,21 @@ using UnityEngine;
 
 public class ButtonPlayerMovement : MonoBehaviour
 {
+    [Header("Movement Parameters")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
+
+
+    [Header("Wall Jumping")]
+    [SerializeField] private float wallJumpX;
+    [SerializeField] private float wallJumpY;
+
+    [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
+
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
 
     private Rigidbody2D body;
     private Animator anim;
@@ -14,9 +25,6 @@ public class ButtonPlayerMovement : MonoBehaviour
 
     private float horizontalInput = 0f;
     private bool jumpRequested = false;
-
-    [Header("SFX")]
-    [SerializeField] private AudioClip jumpSound;
 
     private void Awake()
     {
@@ -28,9 +36,7 @@ public class ButtonPlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Handle movement and animation
-        body.velocity = new Vector2(horizontalInput * moveSpeed, body.velocity.y);
-
+        
         if (horizontalInput > 0.01f)
             transform.localScale = new Vector3(Mathf.Abs(mainScale.x), mainScale.y, mainScale.z);
 
@@ -43,9 +49,14 @@ public class ButtonPlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (jumpRequested && (isGrounded() || onWall()))
+        // Handle movement and animation
+        body.velocity = new Vector2(horizontalInput * moveSpeed, body.velocity.y);
+
+        if (jumpRequested)
         {
-            Jump();
+            if (isGrounded()) Jump();
+            else if (onWall()) WallJump();
+
             jumpRequested = false; 
         }
     }
@@ -60,6 +71,17 @@ public class ButtonPlayerMovement : MonoBehaviour
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jumpForce);
+        anim.SetTrigger("Jump");
+        SoundManager.instance.PlaySound(jumpSound);
+    }
+
+    private void WallJump()
+    {
+        //body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
+        // Flip direction based on which wall you're touching
+        float wallDirection = -Mathf.Sign(transform.localScale.x);
+
+        body.velocity = new Vector2(wallDirection * wallJumpX, wallJumpY);
         anim.SetTrigger("Jump");
         SoundManager.instance.PlaySound(jumpSound);
     }

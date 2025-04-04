@@ -41,7 +41,8 @@ public class Projectile : MonoBehaviour
         SoundManager.instance.PlaySound(impactSound);
 
         if (collision.CompareTag("Enemy"))
-            collision.GetComponent<Health>().TakeDamage(1);
+            if(collision.GetComponent<Health>() != null)
+                collision.GetComponent<Health>().TakeDamage(1);
     }
 
     public void SetDirection(float _direction)

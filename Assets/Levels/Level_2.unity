@@ -5961,6 +5961,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1609551870517856644, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
+      propertyPath: wallJumpX
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609551870517856644, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
+      propertyPath: wallJumpY
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3851597039591712489, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
       propertyPath: m_Name
       value: Player
