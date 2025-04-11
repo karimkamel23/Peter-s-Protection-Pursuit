@@ -4,12 +4,16 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] protected int damage;
 
-
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
+            // Get the health component and apply damage if it exists
+            Health healthComponent = collision.GetComponent<Health>();
+            if (healthComponent != null)
+            {
+                healthComponent.TakeDamage(damage);
+            }
         }
     }
 }
