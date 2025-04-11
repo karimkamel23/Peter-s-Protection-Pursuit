@@ -77,7 +77,6 @@ public class ButtonPlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        //body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
         // Flip direction based on which wall you're touching
         float wallDirection = -Mathf.Sign(transform.localScale.x);
 
@@ -119,9 +118,5 @@ public class ButtonPlayerMovement : MonoBehaviour
         return horizontalInput == 0 && isGrounded() && !onWall();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Not used currently
-    }
 }
 

@@ -9,7 +9,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Get the health component and apply damage if it exists
-            Health healthComponent = collision.GetComponent<Health>();
+            HealthModel healthComponent = collision.GetComponent<HealthModel>();
             if (healthComponent != null)
             {
                 healthComponent.TakeDamage(damage);
