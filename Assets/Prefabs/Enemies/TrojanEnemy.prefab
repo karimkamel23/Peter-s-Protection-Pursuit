@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1749657164128724453}
   - component: {fileID: 243552161096379739}
-  - component: {fileID: 3945865906984460306}
+  - component: {fileID: 5748697073773444083}
+  - component: {fileID: 8332673942619425993}
   - component: {fileID: 7809527240058039303}
   - component: {fileID: 5567691938575085915}
   - component: {fileID: 6704366603570244373}
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3945865906984460306
+--- !u!114 &5748697073773444083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,14 +99,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7645822346035415512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e083518330e9244facbab4755a5a751, type: 3}
+  m_Script: {fileID: 11500000, guid: 33373953990f7364390011efa142f84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+--- !u!114 &8332673942619425993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645822346035415512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3a569838dea8e4c8faabda901b66d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  componentsToDisable:
+  - {fileID: 7809527240058039303}
   iFramesDuration: 0
   numberOfFlashes: 0
-  components:
-  - {fileID: 7809527240058039303}
   deathSound: {fileID: 8300000, guid: eb770f311d14d6b4093b5aaf8dc7e1b6, type: 3}
   hurtSound: {fileID: 8300000, guid: 1d6f52a1762ca844991c9622bc0db920, type: 3}
 --- !u!114 &7809527240058039303

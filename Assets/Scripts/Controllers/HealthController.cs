@@ -3,13 +3,15 @@ using System.Collections;
 
 public class HealthController : MonoBehaviour
 {
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 3; // Will be transferred to model
+
     [Header("Components")]
-    [SerializeField] private Behaviour[] disableOnDeath;
+    [SerializeField] private Behaviour[] componentsToDisable;
     
     [Header("Iframes")]
     [SerializeField] private float iFramesDuration = 1f;
     [SerializeField] private int numberOfFlashes = 4;
-    [SerializeField] private bool useIFrames = true;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip deathSound;
@@ -17,105 +19,98 @@ public class HealthController : MonoBehaviour
 
     private HealthModel healthModel;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    private Animator anim;
     private SoundManager soundManager;
 
     private void Awake()
     {
         healthModel = GetComponent<HealthModel>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        
+        // If no health model, create one
+        if (healthModel == null)
+        {
+            healthModel = gameObject.AddComponent<HealthModel>();
+        }
     }
 
     private void Start()
     {
         soundManager = SoundManager.instance;
-        
-        // Subscribe to health model events
-        if (healthModel != null)
-        {
-            healthModel.OnDamaged += HandleDamage;
-            healthModel.OnDeath += HandleDeath;
-        }
     }
 
-    private void HandleDamage()
+    public void TakeDamage(int damage)
     {
-        if (animator != null)
-        {
-            animator.SetTrigger("hurt");
-        }
+        if (healthModel.IsInvulnerable || healthModel.IsDead) return;
 
-        if (soundManager != null && hurtSound != null)
-        {
-            soundManager.PlaySound(hurtSound);
-        }
+        // Update health in model
+        healthModel.SetHealth(healthModel.CurrentHealth - damage);
 
-        if (useIFrames)
+        if (healthModel.CurrentHealth > 0)
         {
-            StartCoroutine(InvulnerabilityFrames());
-        }
-    }
-
-    private void HandleDeath()
-    {
-        if (animator != null)
-        {
-            animator.SetTrigger("death");
-        }
-
-        if (soundManager != null && deathSound != null)
-        {
-            soundManager.PlaySound(deathSound);
-        }
-
-        // Disable components
-        foreach (Behaviour component in disableOnDeath)
-        {
-            if (component != null)
+            // Hurt sequence
+            anim.SetTrigger("hurt");
+            if (soundManager != null && hurtSound != null)
             {
-                component.enabled = false;
+                soundManager.PlaySound(hurtSound);
             }
-        }
-    }
-
-    private IEnumerator InvulnerabilityFrames()
-    {
-        // Set invulnerable state
-        healthModel.SetInvulnerable(true);
-        
-        // Enable physics layer collision ignore (typically player layer 8 with enemy/damage layer 9)
-        Physics2D.IgnoreLayerCollision(8, 9, true);
-
-        // Flash the sprite
-        if (spriteRenderer != null)
-        {
-            for (int i = 0; i < numberOfFlashes; i++)
-            {
-                spriteRenderer.color = new Color(1, 0, 0, 0.5f);
-                yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-                
-                spriteRenderer.color = Color.white;
-                yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            }
+            StartCoroutine(Invulnerability());
         }
         else
         {
-            yield return new WaitForSeconds(iFramesDuration);
+            // Death sequence
+            anim.SetTrigger("death");
+            
+            foreach (Behaviour component in componentsToDisable)
+            {
+                if (component != null)
+                {
+                    component.enabled = false;
+                }
+            }
+            
+            if (soundManager != null && deathSound != null)
+            {
+                soundManager.PlaySound(deathSound);
+            }
         }
-
-        // Disable invulnerability
-        Physics2D.IgnoreLayerCollision(8, 9, false);
-        healthModel.SetInvulnerable(false);
     }
 
-    private void OnDestroy()
+    public void Heal(int amount)
     {
-        // Unsubscribe from health model events
-        if (healthModel != null)
+        if (healthModel.IsDead) return;
+
+        healthModel.SetHealth(healthModel.CurrentHealth + amount);
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        healthModel.IsInvulnerable = true;
+        Physics2D.IgnoreLayerCollision(8, 9, true);
+        
+        for (int i = 0; i < numberOfFlashes; i++)
         {
-            healthModel.OnDamaged -= HandleDamage;
-            healthModel.OnDeath -= HandleDeath;
+            spriteRenderer.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
+        
+        Physics2D.IgnoreLayerCollision(8, 9, false);
+        healthModel.IsInvulnerable = false;
+    }
+
+    // Called by animation events when death animation completes
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
+    // Public methods for external access
+    public int GetCurrentHealth()
+    {
+        return healthModel.CurrentHealth;
     }
 } 

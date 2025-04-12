@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToDetect: {fileID: 0}
-  doorToOpen: {fileID: 1984681441615008059}
+  doorToOpen: {fileID: 3320461367563383019}
 --- !u!1 &8550327648252979451
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,14 +187,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 6608704342613971330}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1984681441615008059 stripped
+--- !u!114 &3320461367563383019 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 6608704342613971330}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

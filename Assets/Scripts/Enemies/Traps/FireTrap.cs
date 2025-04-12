@@ -14,7 +14,7 @@ public class FireTrap : MonoBehaviour
     private bool triggered;
     private bool active;
 
-    private HealthModel playerHealth;
+    private HealthController playerHealth;
 
     [Header("SFX")]
     [SerializeField] private AudioClip firetrapSound;
@@ -36,7 +36,7 @@ public class FireTrap : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            playerHealth = collision.GetComponent<HealthModel>();
+            playerHealth = collision.GetComponent<HealthController>();
 
             if (!triggered)
                 StartCoroutine(ActivateFireTrap());

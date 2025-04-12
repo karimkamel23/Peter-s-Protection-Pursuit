@@ -21,7 +21,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private Animator anim;
     private EnemyPatrol enemyPatrol;
-    private HealthModel playerHealth;
+    private HealthController playerHealth;
 
     private void Awake()
     {
@@ -65,7 +65,7 @@ public class MeleeEnemy : MonoBehaviour
             0, Vector2.left, 0, playerLayer);
 
         if (hit.collider != null)
-            playerHealth = hit.transform.GetComponent<HealthModel>();
+            playerHealth = hit.transform.GetComponent<HealthController>();
         return hit.collider != null;
     }
 

@@ -71,7 +71,7 @@ public class HealthUIView : MonoBehaviour
         targetHealthModel.OnHealthChanged += UpdateHealthUI;
         
         // Initial update
-        UpdateHealthUI(targetHealthModel.GetCurrentHealth(), targetHealthModel.GetMaxHealth());
+        UpdateHealthUI(targetHealthModel.CurrentHealth, targetHealthModel.MaxHealth);
     }
 
     private void UpdateHealthUI(int currentHealth, int maxHealth)

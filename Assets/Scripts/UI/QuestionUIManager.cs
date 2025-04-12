@@ -17,10 +17,10 @@ public class QuestionUIManager : MonoBehaviour
 
     [Header("Question System Parameters")]
     [SerializeField] private Color correctColor, wrongColor, defaultColor;
-    [SerializeField] private int penaltyAmount = 10;
+    [SerializeField] private int penaltyAmount = 1;
 
     private int correctAnswerIndex;
-    private Door doorToOpen;
+    private DoorController doorToOpen;
 
     private void Awake()
     {

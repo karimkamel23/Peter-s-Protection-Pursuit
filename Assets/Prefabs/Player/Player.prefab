@@ -118,17 +118,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: f3991a63e3f5b9746b24ce19481b17c4, type: 3}
   attackCooldown: 0.5
   firePoint: {fileID: 5647891949771937558}
-  projectiles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  projectiles: []
   projectileSound: {fileID: 8300000, guid: daa693aecd38cad4694e26d3fb2380f1, type: 3}
 --- !u!114 &1139065013009162558
 MonoBehaviour:
@@ -155,11 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3a569838dea8e4c8faabda901b66d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableOnDeath:
-  - {fileID: 1549403435951962182}
+  maxHealth: 3
+  componentsToDisable:
   - {fileID: 3233137833127143304}
   - {fileID: 7322217554190070944}
-  useIFrames: 1
+  - {fileID: 1549403435951962182}
   iFramesDuration: 2
   numberOfFlashes: 3
   deathSound: {fileID: 8300000, guid: 3a55d3b5617daf341965ebd7b2f21256, type: 3}

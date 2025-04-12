@@ -6,6 +6,8 @@ public class UIGameOverView : MonoBehaviour
     [SerializeField] private AudioClip gameOverSound;
 
     private SoundManager soundManager;
+    private UIManager uiManager;
+
 
     private void Awake()
     {
@@ -16,7 +18,7 @@ public class UIGameOverView : MonoBehaviour
     private void Start()
     {
         soundManager = SoundManager.instance;
-        
+        uiManager = FindObjectOfType<UIManager>();
         // Find and subscribe to player's game over event
         PlayerModel playerModel = FindObjectOfType<PlayerModel>();
         if (playerModel != null)
@@ -35,6 +37,22 @@ public class UIGameOverView : MonoBehaviour
         if (soundManager != null && gameOverSound != null)
         {
             soundManager.PlaySound(gameOverSound);
+        }
+    }
+
+    public void ReturnToHome()
+    {
+        if (uiManager != null)
+        {
+            uiManager.MainMenu();
+        }
+    }
+    
+    public void RestartLevel()
+    {
+        if (uiManager != null)
+        {
+            uiManager.Restart();
         }
     }
 

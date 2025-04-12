@@ -113,7 +113,7 @@ public class ButtonPlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    public bool canAttack()
+    public bool CanAttack()
     {
         return horizontalInput == 0 && isGrounded() && !onWall();
     }

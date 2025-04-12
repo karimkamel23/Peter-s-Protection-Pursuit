@@ -1382,6 +1382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377337055}
+  - component: {fileID: 377337057}
   - component: {fileID: 377337056}
   m_Layer: 0
   m_Name: MainMenu
@@ -1422,13 +1423,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 377337054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &377337057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377337054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 0}
   - {fileID: 7551866475735825790}
-  - {fileID: 0}
+  - {fileID: 779765558438380202}
+  - {fileID: 9008134989048037835}
+  - {fileID: 8336462606551264057}
 --- !u!1 &396438859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +1829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465638928}
+  - component: {fileID: 465638930}
   - component: {fileID: 465638929}
   m_Layer: 0
   m_Name: LevelSelect
@@ -1850,13 +1865,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 465638927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &465638930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465638927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 310452743}
 --- !u!1 &486618094
 GameObject:
   m_ObjectHideFlags: 0
@@ -6115,7 +6140,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4781669062416790645}
   - component: {fileID: 8084692692649560323}
-  - component: {fileID: 4629090001992251108}
+  - component: {fileID: 8084692692649560325}
+  - component: {fileID: 8084692692649560324}
   - component: {fileID: 6110448226023254812}
   m_Layer: 0
   m_Name: Door
@@ -6895,23 +6921,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4629090001992251108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143876928032563159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousRoom: {fileID: 377337055}
-  nextRoom: {fileID: 465638928}
-  cam: {fileID: 1119816571}
-  doorCollider: {fileID: 0}
-  doorOpenSound: {fileID: 0}
 --- !u!4 &4781669062416790645
 Transform:
   m_ObjectHideFlags: 0
@@ -7397,6 +7406,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.2843847, y: 36.974884}
   m_EdgeRadius: 0
+--- !u!114 &8084692692649560324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876928032563159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1119816571}
+--- !u!114 &8084692692649560325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876928032563159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf60cca4017f563448573112726fef30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousRoom: {fileID: 377337055}
+  nextRoom: {fileID: 465638928}
+  doorOpenSound: {fileID: 0}
 --- !u!1 &8336462606551264057
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3464877238019319281}
   - component: {fileID: 8863423188914886020}
   - component: {fileID: 1191383526252748556}
-  - component: {fileID: 3737126873585157533}
+  - component: {fileID: 1054630003946253378}
+  - component: {fileID: 1988390970625530554}
   - component: {fileID: 3560382074516670972}
   m_Layer: 0
   m_Name: Info
@@ -108,7 +109,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3737126873585157533
+--- !u!114 &1054630003946253378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,12 +118,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143592780298023480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 926b2f2fd326d4542b8da1ac5a844976, type: 3}
+  m_Script: {fileID: 11500000, guid: fac142c180e233a44a5e757d203553a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   infoText: "Weak passwords like \u2018123456\u2019 or using your name with a number
     (like \u2018peter123\u2019) can be cracked in seconds."
   collectSound: {fileID: 8300000, guid: 711d08750b6f3bc43877a32b2fa93347, type: 3}
+--- !u!114 &1988390970625530554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143592780298023480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde7289cf513d2048b670113fc717f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &3560382074516670972
 BoxCollider2D:
   m_ObjectHideFlags: 0

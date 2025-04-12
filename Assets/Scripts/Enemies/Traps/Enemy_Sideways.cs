@@ -41,7 +41,7 @@ public class Enemy_Sideways : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<HealthModel>().TakeDamage(damage);
+            collision.GetComponent<HealthController>().TakeDamage(damage);
         }
     }
 }

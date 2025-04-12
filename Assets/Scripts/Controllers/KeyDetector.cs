@@ -3,7 +3,7 @@ using UnityEngine;
 public class KeyDetector : MonoBehaviour
 {
     [SerializeField] private GameObject keyToDetect;
-    [SerializeField] private Door doorToOpen;
+    [SerializeField] private DoorController doorToOpen;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -46,7 +46,7 @@ public class ProjectileController : MonoBehaviour
         // Handle damage to enemy
         if (collision.CompareTag("Enemy"))
         {
-            HealthModel healthModel = collision.GetComponent<HealthModel>();
+            HealthController healthModel = collision.GetComponent<HealthController>();
             if (healthModel != null)
             {
                 healthModel.TakeDamage(1);

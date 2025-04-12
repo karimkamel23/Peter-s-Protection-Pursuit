@@ -189,17 +189,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 1840580814}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &22451064 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
-  m_PrefabInstance: {fileID: 1840580814}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &24362883
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +540,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &77240447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_PrefabInstance: {fileID: 1840580814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &77668034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2114500401478869212, guid: 1e0384c9436c00c48a223ec43e9880fb, type: 3}
@@ -623,16 +623,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0384c9436c00c48a223ec43e9880fb, type: 3}
---- !u!1 &129864440 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 806678498391955114, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-  m_PrefabInstance: {fileID: 3233956299649191946}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &129864441 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-  m_PrefabInstance: {fileID: 3233956299649191946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &140104871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1414,6 +1404,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca111d3773f48ff4188f135f02ead843, type: 3}
+--- !u!224 &226745591 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+  m_PrefabInstance: {fileID: 1735230249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229782928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4123,6 +4118,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: nextRoom
+      value: 
+      objectReference: {fileID: 797194121}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: previousRoom
+      value: 
+      objectReference: {fileID: 1364104300}
+    - target: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4517,6 +4524,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 797194121}
     m_Modifications:
+    - target: {fileID: 1054630003946253378, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
+      propertyPath: infoText
+      value: "Password managers help generate and store secure, unique passwords
+        \u2014 and you only have to remember one master password."
+      objectReference: {fileID: 0}
     - target: {fileID: 1143592780298023480, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
       propertyPath: m_Name
       value: Info (1)
@@ -4585,6 +4597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 797194121}
+  - component: {fileID: 797194123}
   - component: {fileID: 797194122}
   m_Layer: 0
   m_Name: Room4
@@ -4635,7 +4648,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 797194120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &797194123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797194120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
@@ -4789,17 +4814,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 614627698}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &841726045 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
-  m_PrefabInstance: {fileID: 614627698}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &843286444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5367,6 +5381,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: nextRoom
+      value: 
+      objectReference: {fileID: 1320095134}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: previousRoom
+      value: 
+      objectReference: {fileID: 797194121}
+    - target: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5377,15 +5403,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 948904643}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &948904647 stripped
+--- !u!114 &948904648 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 948904643}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &954625221
@@ -5549,6 +5575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979880795}
+  - component: {fileID: 979880797}
   - component: {fileID: 979880796}
   m_Layer: 0
   m_Name: Room2
@@ -5593,7 +5620,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 979880794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &979880797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979880794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
@@ -5735,9 +5774,9 @@ RectTransform:
   - {fileID: 365681379}
   - {fileID: 1014097858}
   - {fileID: 635227222}
-  - {fileID: 129864441}
+  - {fileID: 226745591}
   - {fileID: 1226020064}
-  - {fileID: 9073448989033197130}
+  - {fileID: 1119931908}
   - {fileID: 233264063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5758,11 +5797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f639dc54ca3fdd14fb4445635947c1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 129864440}
+  gameOverScreen: {fileID: 0}
   gameOverSound: {fileID: 8300000, guid: f64f4f01f15b3cf488ead39a628c6e75, type: 3}
   pauseScreen: {fileID: 1226020063}
   pauseSound: {fileID: 8300000, guid: 799b0de6a73474b498db8aaf63fa88ce, type: 3}
-  levelCompleteScreen: {fileID: 1602426995528026074}
+  levelCompleteScreen: {fileID: 0}
   levelCompleteSound: {fileID: 8300000, guid: 9bfc73f17fd15604b9c0cd40dd126fe1, type: 3}
   HUDs:
   - {fileID: 1384142023}
@@ -5790,7 +5829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a0dca64ebc0274d9fbf0c1c327ad55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 129864440}
+  gameOverScreen: {fileID: 0}
   gameOverSound: {fileID: 8300000, guid: f64f4f01f15b3cf488ead39a628c6e75, type: 3}
 --- !u!1001 &1023307391
 PrefabInstance:
@@ -6294,17 +6333,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 1799252543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1096484438 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
-  m_PrefabInstance: {fileID: 1799252543}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1100166314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,6 +6420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102251927}
+  - component: {fileID: 1102251929}
   - component: {fileID: 1102251928}
   m_Layer: 0
   m_Name: Room1
@@ -6433,7 +6462,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102251926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1102251929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102251926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
@@ -6536,6 +6577,22 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8266388066054470673, guid: 7e4c3c9e9d3a5e64ca3373a8b89269d6, type: 3}
   m_PrefabInstance: {fileID: 1177722358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1108083231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_PrefabInstance: {fileID: 1799252543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &1119931908 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+  m_PrefabInstance: {fileID: 1614374617}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120343885
 GameObject:
@@ -7241,6 +7298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320095134}
+  - component: {fileID: 1320095136}
   - component: {fileID: 1320095135}
   m_Layer: 0
   m_Name: Room5
@@ -7286,7 +7344,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320095133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1320095136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320095133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
@@ -7351,6 +7421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364104300}
+  - component: {fileID: 1364104302}
   - component: {fileID: 1364104301}
   m_Layer: 0
   m_Name: Room3
@@ -7395,14 +7466,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1364104299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9acdb2d60500c42b6ed8f308ab6a9b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5f8a4948258e345a13a003705004d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1364104302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364104299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68eb970348c624887e73fd576d5706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1976860530}
-  - {fileID: 1004487942}
   - {fileID: 1197383798}
   - {fileID: 5643403034289450543}
+  - {fileID: 1976860530}
+  - {fileID: 1004487942}
 --- !u!1 &1371516841
 GameObject:
   m_ObjectHideFlags: 0
@@ -7744,6 +7827,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1320095134}
     m_Modifications:
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.doorToOpen
+      value: 
+      objectReference: {fileID: 77240447}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.questionText
+      value: Which of the following is an example of two-factor authentication (2FA)?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.correctAnswerIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[0]
+      value: Typing your username twice
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[1]
+      value: Typing your password twice
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[2]
+      value: Receiving a login code on your phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[3]
+      value: Reusing the same password across devices
+      objectReference: {fileID: 0}
     - target: {fileID: 5369864635738471131, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.46
@@ -7787,7 +7898,7 @@ PrefabInstance:
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.doorToOpen
       value: 
-      objectReference: {fileID: 22451064}
+      objectReference: {fileID: 77240447}
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.questionText
       value: Which of the following is an example of two-factor authentication (2FA)?
@@ -7829,6 +7940,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1364104300}
     m_Modifications:
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.doorToOpen
+      value: 
+      objectReference: {fileID: 1709444918}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.questionText
+      value: What is the *safest* way to manage your passwords across multiple sites?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.correctAnswerIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[0]
+      value: Use the same password for everything
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[1]
+      value: Write them in a notebook
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[2]
+      value: Put them in a text file on your desktop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[3]
+      value: Use a trusted password manager
+      objectReference: {fileID: 0}
     - target: {fileID: 5369864635738471131, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -7872,7 +8011,7 @@ PrefabInstance:
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.doorToOpen
       value: 
-      objectReference: {fileID: 841726045}
+      objectReference: {fileID: 1709444918}
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.questionText
       value: What is the *safest* way to manage your passwords across multiple sites?
@@ -8239,6 +8378,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1364104300}
     m_Modifications:
+    - target: {fileID: 1054630003946253378, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
+      propertyPath: infoText
+      value: Using the same password for all your accounts is risky. One breach can
+        expose everything about you.
+      objectReference: {fileID: 0}
     - target: {fileID: 1143592780298023480, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
       propertyPath: m_Name
       value: Info (1)
@@ -8358,6 +8502,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 797194121}
     m_Modifications:
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.doorToOpen
+      value: 
+      objectReference: {fileID: 948904648}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.questionText
+      value: What should you avoid when creating a password?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[0]
+      value: Making it long and use special characters
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[1]
+      value: "Using your pet\u2019s name and year of birth"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[2]
+      value: Making it completely random
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[3]
+      value: "Using a phrase you\u2019ve never posted online"
+      objectReference: {fileID: 0}
     - target: {fileID: 5369864635738471131, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.39
@@ -8401,7 +8569,7 @@ PrefabInstance:
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.doorToOpen
       value: 
-      objectReference: {fileID: 948904647}
+      objectReference: {fileID: 948904648}
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.questionText
       value: What should you avoid when creating a password?
@@ -8650,6 +8818,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 979880795}
     m_Modifications:
+    - target: {fileID: 1054630003946253378, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
+      propertyPath: infoText
+      value: "Strong passwords use a mix of upper/lowercase letters, numbers, and
+        symbols \u2013 and aren\u2019t connected to personal details, like usernames
+        or birthdates."
+      objectReference: {fileID: 0}
     - target: {fileID: 1143592780298023480, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
       propertyPath: m_Name
       value: Info
@@ -9291,6 +9465,107 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c86a22cc45fc16438fee7aeb5039b61, type: 3}
+--- !u!1001 &1614374617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1022913372}
+    m_Modifications:
+    - target: {fileID: 6019157697132774962, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334649552970252996, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484502707008911866, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
+      propertyPath: m_Name
+      value: LevelComplete
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df203ad836e92dc4d9f4a39365e7184f, type: 3}
 --- !u!1 &1620468369
 GameObject:
   m_ObjectHideFlags: 0
@@ -9716,6 +9991,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0384c9436c00c48a223ec43e9880fb, type: 3}
+--- !u!114 &1709444918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_PrefabInstance: {fileID: 614627698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1711168237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9724,6 +10010,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1320095134}
     m_Modifications:
+    - target: {fileID: 1054630003946253378, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
+      propertyPath: infoText
+      value: Even with a strong password, enabling two-factor authentication (2FA)
+        gives you an extra layer of protection.
+      objectReference: {fileID: 0}
     - target: {fileID: 1143592780298023480, guid: 47efbc6b69bca7f4bb77ad9f7ca4145b, type: 3}
       propertyPath: m_Name
       value: Info (1)
@@ -10006,6 +10297,103 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4c3c9e9d3a5e64ca3373a8b89269d6, type: 3}
+--- !u!1001 &1735230249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1022913372}
+    m_Modifications:
+    - target: {fileID: 1433501907465545192, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_Name
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455375687643737281, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3556189e34661f14cbc6a6de6827f25c, type: 3}
 --- !u!4 &1754380413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2114500401478869212, guid: 1e0384c9436c00c48a223ec43e9880fb, type: 3}
@@ -10543,6 +10931,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: nextRoom
+      value: 
+      objectReference: {fileID: 1364104300}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: previousRoom
+      value: 
+      objectReference: {fileID: 979880795}
+    - target: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10689,6 +11089,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: nextRoom
+      value: 
+      objectReference: {fileID: 1518075771}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: previousRoom
+      value: 
+      objectReference: {fileID: 1320095134}
+    - target: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11005,6 +11417,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 979880795}
     m_Modifications:
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.doorToOpen
+      value: 
+      objectReference: {fileID: 1108083231}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.questionText
+      value: Which password is *most secure* and difficult to guess?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.correctAnswerIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[0]
+      value: Password2024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[1]
+      value: SkyisBlue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[2]
+      value: aR8#kLm29@ddF
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[3]
+      value: JohnyFransia112001
+      objectReference: {fileID: 0}
     - target: {fileID: 5369864635738471131, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.67
@@ -11048,7 +11488,7 @@ PrefabInstance:
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.doorToOpen
       value: 
-      objectReference: {fileID: 1096484438}
+      objectReference: {fileID: 1108083231}
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.questionText
       value: Which password is *most secure* and difficult to guess?
@@ -12155,125 +12595,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 972a6fdde400fa04ba27a0aacbecfa6f, type: 3}
---- !u!1 &1602426995528026074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 766839792753155016, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-  m_PrefabInstance: {fileID: 7469284805622010046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2114500401234013779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5567044977881626571, guid: 8a9a1172ce640d44c84372a3776c6ede, type: 3}
   m_PrefabInstance: {fileID: 7215773581077986836}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3233956299649191946
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1022913372}
-    m_Modifications:
-    - target: {fileID: 806678498391955114, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_Name
-      value: GameOverScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 806678498391955114, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760360250068413318, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432988576339158712, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1022913373}
-    - target: {fileID: 8856097746946020973, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1022913373}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4fa73b4584b6e0d4c9ebe814ff834776, type: 3}
 --- !u!1001 &3710321666299825540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12749,6 +13075,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4781669062370329128, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
   m_PrefabInstance: {fileID: 8006743966153146924}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5262969138366610433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+  m_PrefabInstance: {fileID: 8006743966153146924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5643403034289450543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4214269257333428574, guid: 75d43d8e534c58c4f959eebf0fdfffbc, type: 3}
@@ -12762,6 +13099,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1102251927}
     m_Modifications:
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.doorToOpen
+      value: 
+      objectReference: {fileID: 5262969138366610433}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.questionText
+      value: Which of these is the *weakest* password?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.correctAnswerIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[0]
+      value: peter123
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[2]
+      value: Passw0rd!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678745880859933605, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
+      propertyPath: questionData.answers.Array.data[3]
+      value: '#BlueOcean9'
+      objectReference: {fileID: 0}
     - target: {fileID: 5369864635738471131, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.08
@@ -12805,7 +13166,7 @@ PrefabInstance:
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.doorToOpen
       value: 
-      objectReference: {fileID: 7107377020237756116}
+      objectReference: {fileID: 5262969138366610433}
     - target: {fileID: 6527989011747021697, guid: ad35dda52601d2b449ebde5799e87dd2, type: 3}
       propertyPath: question.questionText
       value: Which of these is the *weakest* password?
@@ -13247,6 +13608,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1549403435951962182, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
+      propertyPath: projectiles.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549403435951962182, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
       propertyPath: projectiles.Array.data[0]
       value: 
       objectReference: {fileID: 821816340}
@@ -13394,17 +13759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b653dfdf31f6824bbe3a22d1aa06e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7107377020237756116 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4629090001971544249, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
-  m_PrefabInstance: {fileID: 8006743966153146924}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7215773581077986836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13462,115 +13816,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9a1172ce640d44c84372a3776c6ede, type: 3}
---- !u!1001 &7469284805622010046
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1022913372}
-    m_Modifications:
-    - target: {fileID: 766839792753155016, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_Name
-      value: LevelCompleteScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 766839792753155016, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2365064057903565005, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1022913373}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2714880758581126787, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1022913373}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
 --- !u!1001 &7956245416747860790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13696,6 +13941,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: nextRoom
+      value: 
+      objectReference: {fileID: 979880795}
+    - target: {fileID: 8317704187035916151, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: previousRoom
+      value: 
+      objectReference: {fileID: 1102251927}
+    - target: {fileID: 8476464514182914409, guid: 574e7cbd192a55c4c818a5c0b4e67153, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13941,11 +14198,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
---- !u!224 &9073448989033197130 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2375207297331285427, guid: d0ce14c93fd778540b46e99dd01c7fff, type: 3}
-  m_PrefabInstance: {fileID: 7469284805622010046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
