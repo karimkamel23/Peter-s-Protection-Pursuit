@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5616705386869422849}
   - component: {fileID: 6484384414555763900}
   - component: {fileID: 1549403435951962182}
-  - component: {fileID: 1139065013009162558}
+  - component: {fileID: 8552383156809762392}
   - component: {fileID: 6707332862639143524}
   - component: {fileID: 3233137833127143304}
   - component: {fileID: 7322217554190070944}
@@ -120,7 +120,7 @@ MonoBehaviour:
   firePoint: {fileID: 5647891949771937558}
   projectiles: []
   projectileSound: {fileID: 8300000, guid: daa693aecd38cad4694e26d3fb2380f1, type: 3}
---- !u!114 &1139065013009162558
+--- !u!114 &8552383156809762392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4781669062370329128}
   - component: {fileID: 8084692692611514206}
-  - component: {fileID: 8317704187035916151}
   - component: {fileID: 8476464514182914409}
+  - component: {fileID: -5036237706922828262}
   - component: {fileID: 8785122581431384392}
   - component: {fileID: 6110448225986338113}
   - component: {fileID: 6224324243733854678}
@@ -83,7 +83,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.2843847, y: 36.974884}
   m_EdgeRadius: 0
---- !u!114 &8317704187035916151
+--- !u!114 &8476464514182914409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876927988279690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+--- !u!114 &-5036237706922828262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,19 +111,6 @@ MonoBehaviour:
   previousRoom: {fileID: 0}
   nextRoom: {fileID: 0}
   doorOpenSound: {fileID: 8300000, guid: 7b43a210c7554ee4fba960ee3dee461f, type: 3}
---- !u!114 &8476464514182914409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143876927988279690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!114 &8785122581431384392
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1443180331262191859}
   - component: {fileID: 2757393914813213215}
   - component: {fileID: 6003167283317588860}
-  - component: {fileID: 1080525761066884262}
+  - component: {fileID: -17673914360349892}
   - component: {fileID: 4623754987862635635}
   m_Layer: 9
   m_Name: Saw
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.38, y: 0.38}
   m_EdgeRadius: 0
---- !u!114 &1080525761066884262
+--- !u!114 &-17673914360349892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,12 +141,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5860059458692504314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473342429bf22c14e8b8c088232b9764, type: 3}
+  m_Script: {fileID: 11500000, guid: f69e2bf15036ee340b007096247437d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  movementDistance: 3
-  speed: 5
+  model:
+    movementDistance: 2
+    speed: 2
 --- !u!95 &4623754987862635635
 Animator:
   serializedVersion: 5

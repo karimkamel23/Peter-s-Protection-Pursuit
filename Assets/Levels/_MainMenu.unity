@@ -288,30 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f639dc54ca3fdd14fb4445635947c1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  pauseScreen: {fileID: 0}
-  pauseSound: {fileID: 0}
-  levelCompleteScreen: {fileID: 0}
-  levelCompleteSound: {fileID: 0}
   HUDs: []
-  enemyInfoScreen: {fileID: 461133787}
-  audioScreen: {fileID: 955542356}
-  soundSlider: {fileID: 1805880544}
-  soundPercentage: {fileID: 1271344890}
-  musicSlider: {fileID: 1564853209}
-  musicPercentage: {fileID: 8142966}
-  mainMenuScreen: {fileID: 517209494}
-  playerAnimation: {fileID: 5745230532007482850}
-  levelSelectScreen: {fileID: 1526146441}
-  levels:
-  - levelScene: Level_1_Cutscene
-    levelName: 'LEVEL 1: PASSWORD PENETRATION'
-    selectionIndicator: {fileID: 1374369350}
-  - levelScene: Level_2_Cutscene
-    levelName: 'LEVEL 2: MALWARE MADNESS'
-    selectionIndicator: {fileID: 486618094}
-  selectedLevelTitle: {fileID: 1769134778}
 --- !u!114 &12903447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,10 +365,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1774541140}
-  - {fileID: 517209495}
-  - {fileID: 1526146442}
-  - {fileID: 172108214}
+  - {fileID: 846347134}
   - {fileID: 461133790}
+  - {fileID: 172108214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -481,8 +457,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: CloseAudioScreen
         m_Mode: 1
         m_Arguments:
@@ -613,9 +589,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ToggleEnemyScreen
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
+        m_MethodName: ToggleEnemyInfoScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1211,8 +1187,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: OpenAudioScreen
         m_Mode: 1
         m_Arguments:
@@ -1996,7 +1972,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517209494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2005,7 +1981,7 @@ RectTransform:
   - {fileID: 316513881}
   - {fileID: 150688888}
   - {fileID: 955542357}
-  m_Father: {fileID: 12903450}
+  m_Father: {fileID: 846347134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2489,6 +2465,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &846347133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846347134}
+  - component: {fileID: 846347135}
+  m_Layer: 5
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &846347134
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846347133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 517209495}
+  - {fileID: 1526146442}
+  m_Father: {fileID: 12903450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &846347135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846347133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d880e444a779b4aac28f3f0d16c005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuScreen: {fileID: 517209494}
+  playerAnimation: {fileID: 5745230532007482852}
+  levelSelectScreen: {fileID: 1526146441}
+  levels:
+  - levelScene: Level_1_Cutscene
+    levelName: 'LEVEL 1: PASSWORD PURSUIT'
+    selectionIndicator: {fileID: 1374369350}
+  - levelScene: Level_2_Cutscene
+    levelName: 'LEVEL 2: MALWARE MADNESS'
+    selectionIndicator: {fileID: 486618094}
+  selectedLevelTitle: {fileID: 1769134778}
+  audioScreen: {fileID: 955542356}
+  soundSlider: {fileID: 1805880544}
+  soundPercentage: {fileID: 1271344890}
+  musicSlider: {fileID: 1564853209}
+  musicPercentage: {fileID: 8142966}
+  enemyInfoScreen: {fileID: 461133787}
 --- !u!1 &858404165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,8 +2614,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: SelectLevel
         m_Mode: 3
         m_Arguments:
@@ -3313,8 +3356,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -3605,8 +3648,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: PlaySelectedLevel
         m_Mode: 1
         m_Arguments:
@@ -3817,8 +3860,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: SelectLevel
         m_Mode: 3
         m_Arguments:
@@ -4405,9 +4448,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ToggleEnemyScreen
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
+        m_MethodName: ToggleEnemyInfoScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4707,7 +4750,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526146441}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4717,12 +4760,12 @@ RectTransform:
   - {fileID: 1101645053}
   - {fileID: 1217273222}
   - {fileID: 1769134777}
-  m_Father: {fileID: 12903450}
+  m_Father: {fileID: 846347134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2018.3679, y: 878.8667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1564853207
 GameObject:
@@ -4813,19 +4856,7 @@ MonoBehaviour:
   m_Value: 0.519
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1576648907
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,19 +5550,7 @@ MonoBehaviour:
   m_Value: 0.519
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetSoundVolume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1911150398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,8 +5634,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12903446}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 846347135}
+        m_TargetAssemblyTypeName: MainMenuView, Assembly-CSharp
         m_MethodName: GoToLevelSelect
         m_Mode: 1
         m_Arguments:
@@ -7014,8 +7033,8 @@ GameObject:
   - component: {fileID: 3979559642800343049}
   - component: {fileID: 2537108682608166836}
   - component: {fileID: 762514417430532027}
-  - component: {fileID: 5745230532007482850}
   - component: {fileID: 5745230532007482851}
+  - component: {fileID: 5745230532007482852}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -7023,20 +7042,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5745230532007482850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5745230532007482849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f15ee38fad219f429f0910d87a26cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDuration: 2
-  moveDistanceX: 13.3
 --- !u!61 &5745230532007482851
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7082,6 +7087,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4375, y: 3.125}
   m_EdgeRadius: 0
+--- !u!114 &5745230532007482852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5745230532007482849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f15ee38fad219f429f0910d87a26cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDuration: 2
+  moveDistanceX: 13.3
 --- !u!1 &5841007182583967611
 GameObject:
   m_ObjectHideFlags: 0

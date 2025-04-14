@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4194373050584221389}
   - component: {fileID: 2205220458463981161}
-  - component: {fileID: 7769370809305215449}
+  - component: {fileID: 4339649591446681256}
   - component: {fileID: 4320050343571188447}
-  - component: {fileID: 2940246129372078352}
+  - component: {fileID: 5360176972277566015}
   - component: {fileID: 3887887717159777550}
   - component: {fileID: 2129377882734701907}
   - component: {fileID: 4800934372294265093}
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7769370809305215449
+--- !u!114 &4339649591446681256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,12 +119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   componentsToDisable:
-  - {fileID: 2940246129372078352}
+  - {fileID: 5360176972277566015}
   iFramesDuration: 0
   numberOfFlashes: 0
   deathSound: {fileID: 8300000, guid: eb770f311d14d6b4093b5aaf8dc7e1b6, type: 3}
   hurtSound: {fileID: 8300000, guid: 1d6f52a1762ca844991c9622bc0db920, type: 3}
---- !u!114 &2940246129372078352
+--- !u!114 &5360176972277566015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,30 +133,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 5105366973573064832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7c12cd9f5852742b8c22f526802ff9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f06d01d43a61f141b4a451b3ce0a7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
-  range: 7
-  damage: 1
-  firePoint: {fileID: 4247422149243320255}
-  projectiles:
-  - {fileID: 5615984357034704044}
-  - {fileID: 3890475312748159628}
-  - {fileID: 6409562903723004675}
-  - {fileID: 8374429745701469854}
-  - {fileID: 7675357270093195952}
-  - {fileID: 8571196506854373164}
-  - {fileID: 2169878320449537954}
-  - {fileID: 3111319109154981581}
-  - {fileID: 8132307893624963954}
-  - {fileID: 4646611195949320130}
-  colliderDistance: 0.6
+  model:
+    attackCooldown: 1
+    range: 7
+    damage: 1
+    firePoint: {fileID: 4247422149243320255}
+    projectiles:
+    - {fileID: 5615984357034704044}
+    - {fileID: 3890475312748159628}
+    - {fileID: 6409562903723004675}
+    - {fileID: 8374429745701469854}
+    - {fileID: 7675357270093195952}
+    - {fileID: 8571196506854373164}
+    - {fileID: 2169878320449537954}
+    - {fileID: 3111319109154981581}
+    - {fileID: 8132307893624963954}
+    - {fileID: 4646611195949320130}
+    colliderDistance: 0.6
+    playerLayer:
+      serializedVersion: 2
+      m_Bits: 256
+    projectileSound: {fileID: 8300000, guid: 79cc2402289b0c7419546465abe8aa8a, type: 3}
   boxCollider: {fileID: 9180345506365020691}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  projectileSound: {fileID: 8300000, guid: 79cc2402289b0c7419546465abe8aa8a, type: 3}
 --- !u!114 &3887887717159777550
 MonoBehaviour:
   m_ObjectHideFlags: 0

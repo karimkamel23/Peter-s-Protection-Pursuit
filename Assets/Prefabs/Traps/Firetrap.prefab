@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3171426467793397927}
   - component: {fileID: 1585934214889489147}
-  - component: {fileID: 4524639595016238355}
+  - component: {fileID: -3641177414632368756}
+  - component: {fileID: -2232133024731399785}
   - component: {fileID: 3561424927616832086}
   - component: {fileID: 6021019847426467433}
   m_Layer: 9
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4524639595016238355
+--- !u!114 &-3641177414632368756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,13 +98,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 4214269257333428574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ec6336f10c39804a817cbc4ce4d928d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b91c63d9ea38e545b1435117dcec7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  activationDelay: 2
-  activeTime: 2
-  firetrapSound: {fileID: 8300000, guid: 0cecf08a4285a3e47b839b9814bb1073, type: 3}
+  model:
+    damage: 1
+    activationDelay: 2
+    activeTime: 2
+    firetrapSound: {fileID: 8300000, guid: 0cecf08a4285a3e47b839b9814bb1073, type: 3}
+--- !u!114 &-2232133024731399785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214269257333428574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343d7c50cf4115408deb32c3a9a9ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &3561424927616832086
 BoxCollider2D:
   m_ObjectHideFlags: 0

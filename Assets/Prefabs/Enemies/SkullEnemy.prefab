@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6276669863492158904}
   - component: {fileID: 3068986066087310806}
-  - component: {fileID: 6611643188851286600}
+  - component: {fileID: -4920837372294797701}
   - component: {fileID: 4196618729533184929}
-  - component: {fileID: 8524088637368977245}
+  - component: {fileID: 3816612172984458084}
   - component: {fileID: 4515495160522011623}
   - component: {fileID: 8201391059915361335}
   - component: {fileID: 8961285829656596109}
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6611643188851286600
+--- !u!114 &-4920837372294797701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,12 +119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   componentsToDisable:
-  - {fileID: 8524088637368977245}
+  - {fileID: 3816612172984458084}
   iFramesDuration: 0
   numberOfFlashes: 0
   deathSound: {fileID: 8300000, guid: eb770f311d14d6b4093b5aaf8dc7e1b6, type: 3}
   hurtSound: {fileID: 8300000, guid: 1d6f52a1762ca844991c9622bc0db920, type: 3}
---- !u!114 &8524088637368977245
+--- !u!114 &3816612172984458084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,19 +133,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8336462604614600578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea43f6773788ee4197ba69b22fea3f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a19c359f3e3a8941be2b7245e9d4cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
-  range: 1.5
-  damage: 2
-  colliderDistance: 2
+  model:
+    attackCooldown: 1
+    range: 1.5
+    damage: 2
+    colliderDistance: 2
+    top: 0
+    playerLayer:
+      serializedVersion: 2
+      m_Bits: 256
+    attackSound: {fileID: 8300000, guid: 8c7fedb9598b14843bfc28c06b862bdb, type: 3}
   boxCollider: {fileID: 8975033595577638472}
-  top: 0
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  attackSound: {fileID: 8300000, guid: 8c7fedb9598b14843bfc28c06b862bdb, type: 3}
 --- !u!114 &4515495160522011623
 MonoBehaviour:
   m_ObjectHideFlags: 0

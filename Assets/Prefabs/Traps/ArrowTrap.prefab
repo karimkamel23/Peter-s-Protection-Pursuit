@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2703309032182748246}
-  - component: {fileID: 3759705756517789828}
+  - component: {fileID: 8271491633668266283}
   m_Layer: 0
   m_Name: ArrowTrap
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 6158853457464091658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3759705756517789828
+--- !u!114 &8271491633668266283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,10 +44,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2223632110790539703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393aaf7c2993a0340bbd8ef9da72159b, type: 3}
+  m_Script: {fileID: 11500000, guid: bd374e91856a58e4fa054d18b36b57ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 2
+  model:
+    attackCooldown: 2
+    arrowSound: {fileID: 8300000, guid: dceff17d161460245986e1c30e0674ab, type: 3}
   firePoint: {fileID: 20084766155917738}
   arrows:
   - {fileID: 4549918184684812307}
@@ -60,7 +62,6 @@ MonoBehaviour:
   - {fileID: 1750890267212556601}
   - {fileID: 7555994501000368669}
   - {fileID: 3592459755756794549}
-  arrowSound: {fileID: 8300000, guid: dceff17d161460245986e1c30e0674ab, type: 3}
 --- !u!1 &4076645946048638339
 GameObject:
   m_ObjectHideFlags: 0
