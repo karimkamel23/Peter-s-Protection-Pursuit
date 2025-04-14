@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6623811372406540836}
   - component: {fileID: 631742270114254833}
-  - component: {fileID: 6961416142830301188}
+  - component: {fileID: 2344658019625505296}
+  - component: {fileID: 7332830761552568018}
   - component: {fileID: 7804618615122031864}
   - component: {fileID: 2180587698289005289}
   m_Layer: 9
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6961416142830301188
+--- !u!114 &2344658019625505296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,13 +97,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020113587128504639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f28f0892854f264283b6e568ee1d861, type: 3}
+  m_Script: {fileID: 11500000, guid: 3226047d4e94d5441961c6913db1e7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 10
-  resetTime: 7
-  impactSound: {fileID: 0}
+  model:
+    speed: 10
+    resetTime: 7
+    impactSound: {fileID: 0}
+--- !u!114 &7332830761552568018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020113587128504639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fbccf2398736047a8efcf0bc2c294b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &7804618615122031864
 BoxCollider2D:
   m_ObjectHideFlags: 0

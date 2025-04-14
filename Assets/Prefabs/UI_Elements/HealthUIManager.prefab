@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382523463500533813}
-  - component: {fileID: 2108182278350660951}
+  - component: {fileID: 7617281518198459468}
   m_Layer: 5
   m_Name: HealthUIManager
   m_TagString: Untagged
@@ -150,7 +150,7 @@ RectTransform:
   m_AnchoredPosition: {x: 1059, y: -489.5}
   m_SizeDelta: {x: 2118, y: 979}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2108182278350660951
+--- !u!114 &7617281518198459468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4013372110933302670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85e1dc08e4299247a97fed90a343743, type: 3}
+  m_Script: {fileID: 11500000, guid: 860ae4d5c53ee8e44a5cd160345d3977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hearts:
@@ -168,7 +168,9 @@ MonoBehaviour:
   - {fileID: 5838093781246487935}
   fullHeart: {fileID: 1237186821, guid: b828c7c3df2c2584ab7f232f5a7953e8, type: 3}
   emptyHeart: {fileID: -1484044705, guid: b828c7c3df2c2584ab7f232f5a7953e8, type: 3}
-  playerHealth: {fileID: 0}
+  heartShakeDuration: 0.5
+  emptyHeartBobAmount: 5
+  emptyHeartBobFrequency: 0.6
 --- !u!1 &4049949708352389401
 GameObject:
   m_ObjectHideFlags: 0

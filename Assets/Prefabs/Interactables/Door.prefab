@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4781669062370329128}
   - component: {fileID: 8084692692611514206}
-  - component: {fileID: 4629090001971544249}
+  - component: {fileID: 8476464514182914409}
+  - component: {fileID: -5036237706922828262}
+  - component: {fileID: 8785122581431384392}
   - component: {fileID: 6110448225986338113}
   - component: {fileID: 6224324243733854678}
   m_Layer: 0
@@ -81,7 +83,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.2843847, y: 36.974884}
   m_EdgeRadius: 0
---- !u!114 &4629090001971544249
+--- !u!114 &8476464514182914409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,14 +92,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 143876927988279690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b6e32a21893c04996542a3bdb9ca91, type: 3}
+  m_Script: {fileID: 11500000, guid: 4390e63c88462a842b013a29de0c1be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+--- !u!114 &-5036237706922828262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876927988279690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf60cca4017f563448573112726fef30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousRoom: {fileID: 0}
   nextRoom: {fileID: 0}
-  cam: {fileID: 0}
-  doorCollider: {fileID: 5405705109653200604}
   doorOpenSound: {fileID: 8300000, guid: 7b43a210c7554ee4fba960ee3dee461f, type: 3}
+--- !u!114 &8785122581431384392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143876927988279690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9e6975b82f2c04ab2a9ebec283a2b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorCollider: {fileID: 5405705109653200604}
 --- !u!50 &6110448225986338113
 Rigidbody2D:
   serializedVersion: 4

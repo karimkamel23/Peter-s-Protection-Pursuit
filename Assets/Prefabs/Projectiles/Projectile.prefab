@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8497037527640127652}
   - component: {fileID: 217984613598930077}
-  - component: {fileID: 5586273236417220325}
+  - component: {fileID: 8774075687656029168}
+  - component: {fileID: 6247638589080860411}
+  - component: {fileID: 5953643522815391695}
   - component: {fileID: 8224516053921054547}
   - component: {fileID: 7881829250022757918}
   - component: {fileID: 2010396322314085445}
@@ -88,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5586273236417220325
+--- !u!114 &8774075687656029168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,11 +99,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 7834915265705269902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67ed7b25c13f72340b6118e200a7dc66, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ec86ce37d44d3b4fb2a49abe2d88edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  maxLifetime: 5
   impactSound: {fileID: 8300000, guid: 425db622413c21246bba998dbdb7cd4e, type: 3}
+--- !u!114 &6247638589080860411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834915265705269902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b264d976d46837418974ccad756f5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5953643522815391695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834915265705269902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e64a027de6ff3b45a012e3d2edd164d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &8224516053921054547
 BoxCollider2D:
   m_ObjectHideFlags: 0

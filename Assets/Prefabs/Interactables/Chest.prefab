@@ -87,7 +87,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2601883271790565519}
   - component: {fileID: 3300801268650366710}
-  - component: {fileID: 975720532897651321}
+  - component: {fileID: 1338064888747078600}
+  - component: {fileID: 1434659425467078111}
+  - component: {fileID: 3647720546437436035}
   - component: {fileID: 7499686908550017424}
   m_Layer: 0
   m_Name: Chest
@@ -164,7 +166,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &975720532897651321
+--- !u!114 &1338064888747078600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,12 +175,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 5620548805734637829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7527ea9292ed83345b6d99894daad253, type: 3}
+  m_Script: {fileID: 11500000, guid: 47d4cdbbd6d960e4b895f6222c30810d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 0}
+  isEnemy: 0
+--- !u!114 &1434659425467078111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620548805734637829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45cf0c7d3c85a8499f89d0d1f7b1b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3647720546437436035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620548805734637829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ca4f1df756d4429295e69e24a02b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openChestSprite: {fileID: -1676677663, guid: b828c7c3df2c2584ab7f232f5a7953e8, type: 3}
-  objectToSpawn: {fileID: 0}
-  isEnemy: 0
 --- !u!61 &7499686908550017424
 BoxCollider2D:
   m_ObjectHideFlags: 0

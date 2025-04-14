@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5369864635738471131}
   - component: {fileID: 7978657955337782627}
-  - component: {fileID: 6527989011747021697}
+  - component: {fileID: 3678745880859933605}
+  - component: {fileID: 4622549098246152567}
   - component: {fileID: 9175226085984783063}
   m_Layer: 8
   m_Name: Button
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6527989011747021697
+--- !u!114 &3678745880859933605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +96,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8290150258482030727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e05538353a8734c9aceef93c8449f9, type: 3}
+  m_Script: {fileID: 11500000, guid: c415f7b189298044886ec5b54e8bd0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressedSprite: {fileID: 1694151452, guid: ef8d55a5065ab31459d7aa070e965b1e, type: 3}
-  question:
+  questionData:
     questionText: Which of these passwords are strong?
     answers:
     - 1234
@@ -107,7 +107,22 @@ MonoBehaviour:
     - Lolo123
     - puppyname
     correctAnswerIndex: 1
+    doorToOpen: {fileID: 0}
+--- !u!114 &4622549098246152567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290150258482030727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bb7fef06953b248b384b653eeae24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedSprite: {fileID: 1694151452, guid: ef8d55a5065ab31459d7aa070e965b1e, type: 3}
   buttonPressSound: {fileID: 8300000, guid: 64dad23496743864c961c2d598016d10, type: 3}
+  questionDelay: 0.5
 --- !u!61 &9175226085984783063
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -139,7 +139,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerAttack, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: AttackRequest
           m_Mode: 1
           m_Arguments:
@@ -439,7 +439,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerMovement, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: StartMoveRight
           m_Mode: 1
           m_Arguments:
@@ -455,7 +455,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerMovement, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: StopMove
           m_Mode: 1
           m_Arguments:
@@ -605,7 +605,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerMovement, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: StartMoveLeft
           m_Mode: 1
           m_Arguments:
@@ -621,7 +621,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerMovement, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: StopMove
           m_Mode: 1
           m_Arguments:
@@ -771,7 +771,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ButtonPlayerMovement, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: JumpRequest
           m_Mode: 1
           m_Arguments:
