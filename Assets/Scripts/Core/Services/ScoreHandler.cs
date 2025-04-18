@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ScoreHandler : MonoBehaviour
 {
@@ -6,7 +7,6 @@ public class ScoreHandler : MonoBehaviour
 
     [SerializeField] private int maxScore = 5;
     private int CurrentScore;
-
 
     private void Awake()
     {
@@ -39,14 +39,26 @@ public class ScoreHandler : MonoBehaviour
         return stars;
     }
 
-    public void SaveScoreForLevel(string levelKey)
+    public void SaveScoreForLevel(int levelNumber)
     {
-        //TBD
+        int stars = GetCurrentScore();
+        User currentUser = AuthService.Instance.GetCurrentUser();
+        
+        if (currentUser != null)
+        {
+            LevelProgress progress = new LevelProgress(
+                currentUser.id,
+                levelNumber,
+                stars,
+                true
+            );
+            
+            StartCoroutine(ProgressService.Instance.SaveProgress(progress));
+        }
     }
 
-    public static int GetSavedScore(string levelKey)
+    public static int GetSavedScore(int levelNumber)
     {
-        //TBD
-        return 0;
+        return ProgressService.Instance.GetStarsForLevel(levelNumber);
     }
 }

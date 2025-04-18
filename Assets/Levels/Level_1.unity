@@ -5809,6 +5809,25 @@ MonoBehaviour:
   HUDs:
   - {fileID: 1384142023}
   - {fileID: 1317746863}
+  loginFields: {fileID: 0}
+  loginUsernameInput: {fileID: 0}
+  loginPasswordInput: {fileID: 0}
+  loginErrorText: {fileID: 0}
+  loginButton: {fileID: 0}
+  goToRegisterButton: {fileID: 0}
+  registerFields: {fileID: 0}
+  registerUsernameInput: {fileID: 0}
+  registerPasswordInput: {fileID: 0}
+  confirmPasswordInput: {fileID: 0}
+  registerEmailInput: {fileID: 0}
+  registerErrorText: {fileID: 0}
+  registerButton: {fileID: 0}
+  goToLoginButton: {fileID: 0}
+  userInfoPanel: {fileID: 0}
+  usernameText: {fileID: 0}
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginAndSignUp
+  mainMenuSceneName: _MainMenu
 --- !u!1001 &1023307391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13647,11 +13666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616705386869422849, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 117.6
       objectReference: {fileID: 0}
     - target: {fileID: 5616705386869422849, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 24.1
       objectReference: {fileID: 0}
     - target: {fileID: 5616705386869422849, guid: 952917f862d9c284093fec2a0006c7ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14182,6 +14201,10 @@ PrefabInstance:
     - target: {fileID: 663353149772936205, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759564468032758089, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
+      propertyPath: levelNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5601036606921461062, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
       propertyPath: uiManager
