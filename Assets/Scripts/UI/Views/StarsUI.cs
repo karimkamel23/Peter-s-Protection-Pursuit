@@ -5,7 +5,12 @@ public class StarsUI : MonoBehaviour
 {
     [SerializeField] private Image[] stars;          
     [SerializeField] private Sprite filledStar;
-    [SerializeField] private Sprite emptyStar;          
+    [SerializeField] private Sprite emptyStar; 
+
+    [Header("For Level Select")]       
+    [SerializeField] private int levelNumber;
+
+    private int starsEarned;
 
     private void Start()
     {
@@ -14,7 +19,8 @@ public class StarsUI : MonoBehaviour
 
     public void ShowStars()
     {
-        int starsEarned = ScoreHandler.Instance.GetCurrentScore();
+        if (levelNumber == null || levelNumber == 0) starsEarned = ScoreHandler.Instance.GetCurrentScore();
+        else starsEarned = ScoreHandler.GetSavedScore(levelNumber);
 
         for (int i = 0; i < stars.Length; i++)
         {

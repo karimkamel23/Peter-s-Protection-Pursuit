@@ -47,6 +47,9 @@ public class SceneLoader : MonoBehaviour
             progressBar.value = progress;
             yield return null;
         }
+
+        loadingScreen.SetActive(false);
+
     }
 
 }

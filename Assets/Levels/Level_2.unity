@@ -3643,11 +3643,6 @@ MonoBehaviour:
   - {fileID: 1511193027}
   - {fileID: 1403504863}
   - {fileID: 1352711962}
---- !u!224 &503574072 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-  m_PrefabInstance: {fileID: 1492961477}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &511434630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8266388066054470673, guid: 7e4c3c9e9d3a5e64ca3373a8b89269d6, type: 3}
@@ -6533,6 +6528,10 @@ PrefabInstance:
     - target: {fileID: 663353149772936205, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759564468032758089, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
+      propertyPath: levelNumber
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5601036606921461062, guid: 923a094cfed875f47b3c9b1ed8e7ea48, type: 3}
       propertyPath: uiManager
@@ -10575,103 +10574,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2114500401478869212, guid: 1e0384c9436c00c48a223ec43e9880fb, type: 3}
   m_PrefabInstance: {fileID: 1629191516}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1492961477
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1830638732}
-    m_Modifications:
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227280336567721410, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7070705426557010597, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
-      propertyPath: m_Name
-      value: LoadingScreenManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3f2409fdfb127d7459229f1cd1f27856, type: 3}
 --- !u!4 &1505127968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7762297362817773315, guid: a465a919711e215428b196a5420f581a, type: 3}
@@ -13396,6 +13298,25 @@ MonoBehaviour:
   HUDs:
   - {fileID: 635229070}
   - {fileID: 1385856633}
+  loginFields: {fileID: 0}
+  loginUsernameInput: {fileID: 0}
+  loginPasswordInput: {fileID: 0}
+  loginErrorText: {fileID: 0}
+  loginButton: {fileID: 0}
+  goToRegisterButton: {fileID: 0}
+  registerFields: {fileID: 0}
+  registerUsernameInput: {fileID: 0}
+  registerPasswordInput: {fileID: 0}
+  confirmPasswordInput: {fileID: 0}
+  registerEmailInput: {fileID: 0}
+  registerErrorText: {fileID: 0}
+  registerButton: {fileID: 0}
+  goToLoginButton: {fileID: 0}
+  userInfoPanel: {fileID: 0}
+  usernameText: {fileID: 0}
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginAndSignUp
+  mainMenuSceneName: _MainMenu
 --- !u!114 &1830638729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13479,7 +13400,6 @@ RectTransform:
   - {fileID: 440781591}
   - {fileID: 1663874257}
   - {fileID: 5424839546387095750}
-  - {fileID: 503574072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
