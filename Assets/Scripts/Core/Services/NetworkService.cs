@@ -20,8 +20,17 @@ public class NetworkService
         }
     }
 
-    // Base server URL (adjust to match your actual server address)
-    private string baseUrl = "http://localhost:3000";
+    // Using HTTPS for secure connection
+    private string baseUrl = "https://localhost:443";
+    
+    // For development only - bypass certificate validation for self-signed certs
+    private class BypassCertificate : CertificateHandler
+    {
+        protected override bool ValidateCertificate(byte[] certificateData)
+        {
+            return true;
+        }
+    }
 
     // Check if internet is available
     public bool IsInternetAvailable()
@@ -47,6 +56,9 @@ public class NetworkService
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
+            
+            // Bypass certificate validation for self-signed certificates
+            request.certificateHandler = new BypassCertificate();
 
             yield return request.SendWebRequest();
 
@@ -102,6 +114,9 @@ public class NetworkService
 
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
+            // Bypass certificate validation for self-signed certificates
+            request.certificateHandler = new BypassCertificate();
+            
             yield return request.SendWebRequest();
 
             if (request.result != UnityWebRequest.Result.Success)
@@ -167,6 +182,9 @@ public class NetworkService
 
         using (UnityWebRequest request = UnityWebRequest.Delete(url))
         {
+            // Bypass certificate validation for self-signed certificates
+            request.certificateHandler = new BypassCertificate();
+            
             yield return request.SendWebRequest();
 
             if (request.result != UnityWebRequest.Result.Success)
