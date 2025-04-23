@@ -21,7 +21,7 @@ public class NetworkService
     }
 
     // Using HTTPS for secure connection
-    private string baseUrl = "https://localhost:443";
+    private string baseUrl = "https://ppp-server-production.up.railway.app";
     
     // For development only - bypass certificate validation for self-signed certs
     private class BypassCertificate : CertificateHandler
