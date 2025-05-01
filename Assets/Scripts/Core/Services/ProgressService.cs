@@ -24,6 +24,7 @@ public class ProgressService
     // Save progress
     public IEnumerator SaveProgress(LevelProgress progress, Action onSuccess = null, Action<string> onError = null)
     {
+        
         // Save progress locally using PlayerPrefs
         SaveProgressLocally(progress);
         
@@ -60,6 +61,9 @@ public class ProgressService
                 PlayerPrefs.SetInt(key, progress.stars);
                 PlayerPrefs.Save();
             }
+            else
+            {
+            }
         }
         else
         {
@@ -80,28 +84,60 @@ public class ProgressService
 
         User currentUser = AuthService.Instance.GetCurrentUser();
         
-        // Step 1: Push local progress to server
         List<LevelProgress> localProgress = GetAllLocalProgress();
+        bool syncSuccess = true;
         
         foreach (LevelProgress progress in localProgress)
         {
-            yield return NetworkService.Instance.Post<SaveProgressResponse>("/save-progress", progress, 
-                response => { },
-                errorMessage => { });
+            bool requestComplete = false;
+            bool requestSuccess = false;
             
-            // Small delay to avoid overwhelming the server
+            yield return NetworkService.Instance.Post<SaveProgressResponse>("/save-progress", progress, 
+                response => {
+                    requestComplete = true;
+                    requestSuccess = true;
+                },
+                errorMessage => {
+                    requestComplete = true;
+                    requestSuccess = false;
+                    syncSuccess = false;
+                });
+            
+            // Wait for the request to complete
+            while (!requestComplete)
+            {
+                yield return null;
+            }
+            
             yield return new WaitForSeconds(0.1f);
         }
         
-        // Step 2: Pull progress from server
+        if (!syncSuccess)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+        
+        bool pullComplete = false;
+        bool pullSuccess = false;
+        
         yield return NetworkService.Instance.Get<ProgressResponseWrapper>($"/progress/{currentUser.id}", 
             serverProgressWrapper => {
                 if (serverProgressWrapper != null && serverProgressWrapper.items != null)
                 {
                     UpdateLocalProgressFromServer(serverProgressWrapper.items);
+                    pullSuccess = true;
                 }
+                pullComplete = true;
             },
-            errorMessage => { });
+            errorMessage => {
+                pullComplete = true;
+            });
+        
+        while (!pullComplete)
+        {
+            yield return null;
+        }
         
         onComplete?.Invoke();
     }
@@ -114,18 +150,14 @@ public class ProgressService
             return;
         }
         
+        
         foreach (var progress in serverProgress)
         {
             string key = string.Format(PROGRESS_KEY_FORMAT, progress.level_number);
+            int currentStars = PlayerPrefs.HasKey(key) ? PlayerPrefs.GetInt(key) : 0;
             
-            // Check if local progress exists
-            int currentLocalStars = PlayerPrefs.HasKey(key) ? PlayerPrefs.GetInt(key) : 0;
-            
-            // Only update if server has higher stars
-            if (progress.stars > currentLocalStars)
-            {
-                PlayerPrefs.SetInt(key, progress.stars);
-            }
+            // Always update with server data
+            PlayerPrefs.SetInt(key, progress.stars);
         }
         
         // Save all changes
@@ -144,8 +176,7 @@ public class ProgressService
         
         User currentUser = AuthService.Instance.GetCurrentUser();
         
-        // Loop through potential level numbers (up to 100, adjust as needed)
-        for (int levelNumber = 1; levelNumber <= 100; levelNumber++)
+        for (int levelNumber = 1; levelNumber <= 10; levelNumber++)
         {
             string key = string.Format(PROGRESS_KEY_FORMAT, levelNumber);
             

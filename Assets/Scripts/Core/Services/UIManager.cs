@@ -143,10 +143,9 @@ public class UIManager : MonoBehaviour
     private IEnumerator SyncProgressAndShowMainMenu()
     {
         // First sync progress
-        yield return StartCoroutine(ProgressService.Instance.SyncOfflineProgress());
-        
-        // Then show main menu
-        MainMenu();
+        yield return StartCoroutine(ProgressService.Instance.SyncOfflineProgress(() => {
+            MainMenu();
+        }));
     }
 
     // Register button handler
